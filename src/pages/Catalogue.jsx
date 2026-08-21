@@ -69,7 +69,7 @@ export default function Catalogue() {
       <aside className="hidden md:flex flex-col w-64 border-r border-outline-variant/20 bg-surface-container-low py-8 space-y-stack-md sticky top-[89px] h-[calc(100vh-89px)] overflow-y-auto">
         <div className="px-6 mb-4">
           <h2 className="text-headline-sm font-headline-md text-primary mb-1">B2B Portal</h2>
-          <p className="text-label-sm font-label-sm text-on-surface-variant">Premium Retailer Access</p>
+          <p className="text-label-sm font-label-sm text-on-surface-variant">Bulk & Wholesale Showroom</p>
         </div>
         
         <nav className="flex-1 flex flex-col gap-2 px-4">
@@ -133,7 +133,7 @@ export default function Catalogue() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-12 gap-4 md:gap-6 border-b border-outline-variant/20 pb-4 md:pb-8">
           <div>
             <h1 className="text-2xl md:text-headline-lg font-headline-md md:font-headline-lg text-primary mb-1 md:mb-2">Wholesale Catalogue</h1>
-            <p className="text-xs md:text-body-md font-body-md text-on-surface-variant">Curated traditional weaves for premium retail partners.</p>
+            <p className="text-xs md:text-body-md font-body-md text-on-surface-variant">Curated traditional weaves for premium retail partners. B2B bulk inquiries only — not open for direct consumer retail.</p>
           </div>
           
           <div className="flex flex-row md:flex-row gap-2 w-full md:w-auto mt-2 md:mt-0">

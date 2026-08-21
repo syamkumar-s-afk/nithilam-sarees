@@ -211,7 +211,7 @@ export default function ProductDetails() {
           <div className="bg-surface-container-lowest border border-outline-variant/30 p-6 mt-4">
             <h4 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-1">Wholesale Interest</h4>
             <p className="text-body-md text-on-surface-variant mb-4">
-              To request official pricing lists, custom weaving options, or shipping estimates, submit a wholesale RFQ.
+              We exclusively cater to wholesale and bulk B2B ordering. To request official pricing lists, custom weaving options, or shipping estimates, submit a wholesale RFQ.
             </p>
             <button 
               onClick={() => setShowInquiryModal(true)}

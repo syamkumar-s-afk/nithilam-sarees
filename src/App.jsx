@@ -191,8 +191,8 @@ function MainAppShell() {
           </div>
         </div>
         <div className="px-margin-mobile md:px-margin-desktop py-6 border-t border-outline-variant/20 max-w-container-max mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-on-surface-variant/60 gap-4">
-          <span>© 2024 Nithilam Sarees B2B. Hand-woven excellence. All Rights Reserved.</span>
-          <span className="text-xs uppercase tracking-widest font-semibold text-primary/70">Showcase Only • Non-Transactional</span>
+          <span>© 2024 Nithilam Sarees. B2B Wholesale & Bulk Orders Only. All Rights Reserved.</span>
+          <span className="text-xs uppercase tracking-widest font-semibold text-primary/70">Trade Showroom • Non-Transactional</span>
         </div>
       </footer>
     </div>
