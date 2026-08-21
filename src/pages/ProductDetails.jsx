@@ -165,13 +165,6 @@ export default function ProductDetails() {
             {/* Title & Badges */}
             <div className="mb-stack-lg">
               <div className="flex gap-2 mb-stack-sm">
-                <span className={`inline-block px-2.5 py-1 text-label-sm font-label-sm uppercase ${
-                  product.stockStatus === 'In Stock' 
-                    ? 'bg-tertiary/10 text-on-tertiary-container' 
-                    : 'bg-secondary/10 text-on-secondary-container'
-                }`}>
-                  {product.stockStatus}: {product.stockCount} Units
-                </span>
                 <span className="inline-block px-2.5 py-1 bg-primary/5 text-primary text-label-sm font-label-sm uppercase">
                   Hand-woven
                 </span>
@@ -187,30 +180,6 @@ export default function ProductDetails() {
               <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-2">COLLECTION OVERVIEW</h3>
               <p className="text-body-md font-body-md text-on-surface-variant leading-relaxed">
                 {product.description}
-              </p>
-            </div>
-
-            {/* Wholesale Pricing Tier Table */}
-            <div className="mb-stack-lg">
-              <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-2">B2B BULK PRICING GUIDELINE</h3>
-              <div className="border border-outline-variant/30 bg-surface-container-lowest">
-                {product.pricingTiers.map((tier, idx) => (
-                  <div 
-                    key={idx} 
-                    className={`flex justify-between p-4 border-b border-outline-variant/20 last:border-0 ${
-                      idx === 1 ? 'bg-primary/5 font-medium' : ''
-                    }`}
-                  >
-                    <span className="text-body-md font-body-md text-on-surface-variant">Qty: {tier.qty}</span>
-                    <span className="text-body-md font-body-md text-primary">
-                      ₹{tier.price.toLocaleString('en-IN')} <span className="text-label-sm font-label-sm text-on-surface-variant">/ unit</span>
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-label-sm font-label-sm text-primary/80 mt-2 flex items-center gap-1">
-                <span className="material-symbols-outlined text-[14px]">info</span>
-                Minimum Order Quantity (MOQ): {product.moq} Units for registered wholesale accounts.
               </p>
             </div>
 
@@ -231,8 +200,8 @@ export default function ProductDetails() {
                   <span className="text-body-md font-body-md text-on-surface font-semibold">{product.weight}</span>
                 </div>
                 <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
-                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Blouse Piece</span>
-                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.blousePiece}</span>
+                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Colours Used</span>
+                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.colors}</span>
                 </div>
               </div>
             </div>
@@ -273,17 +242,11 @@ export default function ProductDetails() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
-                {p.stockStatus && (
-                  <div className="absolute top-4 left-4 bg-primary/10 border border-primary/20 px-2 py-0.5">
-                    <span className="text-label-sm font-label-sm text-primary">{p.stockStatus}</span>
-                  </div>
-                )}
               </div>
               <h4 className="text-body-lg font-body-lg text-on-surface group-hover:text-primary transition-colors mb-1 font-semibold">
                 {p.name}
               </h4>
               <p className="text-body-md font-body-md text-on-surface-variant font-mono text-sm mb-1">{p.sku}</p>
-              <p className="text-label-sm font-label-sm text-primary">{p.priceRange}</p>
             </Link>
           ))}
         </div>

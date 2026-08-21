@@ -6,7 +6,7 @@ export default function InquiryModal({ product, onClose }) {
     businessName: '',
     email: '',
     phone: '',
-    estimatedQty: product?.moq || 5,
+    estimatedQty: 5,
     message: `Hello, we are interested in placing a wholesale order inquiry for the "${product?.name}" (SKU: ${product?.sku}). Please provide shipping terms and custom pricing options.`
   });
   
@@ -45,15 +45,9 @@ export default function InquiryModal({ product, onClose }) {
             <h2 className="text-headline-md font-headline-md text-primary mb-4">Request Wholesale Details</h2>
             
             {product && (
-              <div className="mb-6 p-4 border border-outline-variant/30 bg-surface-container-low flex justify-between items-center">
-                <div>
-                  <h4 className="font-semibold text-on-surface text-sm">{product.name}</h4>
-                  <p className="text-xs text-on-surface-variant">SKU: {product.sku} | {product.fabric}</p>
-                </div>
-                <div className="text-right">
-                  <span className="text-xs text-on-surface-variant block">MOQ</span>
-                  <span className="text-sm font-bold text-primary">{product.moq} Units</span>
-                </div>
+              <div className="mb-6 p-4 border border-outline-variant/30 bg-surface-container-low">
+                <h4 className="font-semibold text-on-surface text-sm">{product.name}</h4>
+                <p className="text-xs text-on-surface-variant">SKU: {product.sku} | {product.fabric}</p>
               </div>
             )}
 
@@ -125,7 +119,7 @@ export default function InquiryModal({ product, onClose }) {
                   <input
                     required
                     type="number"
-                    min={product?.moq || 1}
+                    min={1}
                     id="estimatedQty"
                     name="estimatedQty"
                     value={formData.estimatedQty}

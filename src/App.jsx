@@ -160,7 +160,7 @@ function MainAppShell() {
             <a 
               className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" 
               href="javascript:void(0)"
-              onClick={() => alert("Wholesale purchases are subject to a minimum order quantity (MOQ) of 5 units per design. Price lists are supplied on verification of retail status.")}
+              onClick={() => alert("Wholesale purchases are subject to verification of retail status. Catalog details are supplied upon approval.")}
             >
               Wholesale Terms
             </a>
