@@ -1,134 +1,324 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  audienceContent,
+  pillars,
+  purposeContent,
+  storyCards,
+  taglineContent,
+  valueProposition,
+  voiceContent,
+} from '../data/brandContent';
 
 export default function Home() {
   return (
     <div className="page-transition">
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-surface-variant overflow-hidden">
-          <div 
-            className="bg-cover bg-center w-full h-full opacity-60 mix-blend-multiply transition-transform duration-10000 scale-105" 
-            style={{ 
-              backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4hz-Vi2A4eH25OX9pgd-EFZBxMisi0sj-VOimxteBOm4BDXxNDxaMViYrK8weydF_0Sjc-FHhm1XpriPg2zhG50UFtUyjKmNRLWev1N2J95De0pvyjRj0fyWlPAyA-buHCNNffzardo8bdlsvHMIGmZWjDFSB9pENzKun-d7WewSdQ3Q9B9oSLlrGlu486E6rOIFGnk2U8wWwlN1H2Ach6_-cKK1gjOpFAaxmB0653bJqRgS3Wg9_')" 
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <span className="text-label-sm font-label-sm text-primary uppercase tracking-[0.2em] mb-stack-lg block">
-            Premium B2B Traditional Sarees
+      <section className="relative overflow-hidden min-h-[88vh] flex items-center">
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(28,22,18,0.92)_0%,_rgba(61,44,31,0.82)_38%,_rgba(122,98,71,0.52)_100%),url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(229,226,220,0.10),_transparent_46%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,_rgba(17,14,11,0.12),_rgba(17,14,11,0.28))]" />
+        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32 w-full">
+          <span className="text-label-sm font-label-sm text-primary-fixed uppercase tracking-[0.28em] mb-5 block">
+            Natural Dyed Luxury for Conscious Living
           </span>
-          <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg text-primary mb-stack-md leading-tight">
-            Nithilam Heritage for Discerning Retailers
+          <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg text-white max-w-5xl leading-tight mb-6">
+            A complete Nithilam story rooted in botanical colour, artisan dignity, and clean-water craft.
           </h1>
-          <p className="text-body-lg font-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto">
-            Elevate your boutique's collection with our masterfully crafted, pure silk sarees featuring authentic gold Zari work. Exclusive wholesale access for international buyers.
+          <p className="text-body-lg font-body-lg text-white/82 max-w-3xl leading-relaxed mb-10">
+            Built from the NithilamNatural PDFs, this site now brings together the brand story,
+            mission, partner promise, tone of voice, and the extended narratives behind the
+            brand’s work in Erode.
           </p>
-          <div className="flex flex-col sm:flex-row gap-stack-md justify-center mt-8">
-            <Link 
-              className="bg-primary text-on-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors duration-300 shadow-md" 
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
               to="/collections"
+              className="inline-flex items-center justify-center bg-background text-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-surface-container-high transition-colors"
             >
               Explore Collections
             </Link>
-            <Link 
-              className="border border-outline text-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:border-primary transition-colors duration-300 bg-surface/50 backdrop-blur-sm" 
-              to="/collections"
+            <a
+              href="#stories"
+              className="inline-flex items-center justify-center border border-white/40 text-white px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-white/10 transition-colors"
             >
-              View Lookbook
-            </Link>
+              Read Brand Stories
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Craftsmanship Section (Bento Grid) */}
-      <section className="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
-        <div className="text-center mb-16">
-          <span className="text-label-sm font-label-sm text-primary uppercase tracking-widest block mb-2">ARTISANAL HERITAGE</span>
-          <h2 className="text-headline-lg font-headline-lg text-primary mb-4">The Art of Hand-Weaving</h2>
-          <p className="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
-            A meticulous process passed down through generations of master weavers and artisans.
-          </p>
-        </div>
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8">
+          <div className="bg-surface-container-low border border-outline-variant/20 p-8 md:p-10">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
+              Core Purpose
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-primary mb-5">
+              {purposeContent.title}
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed">
+              {purposeContent.purpose}
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter h-auto md:h-[600px]">
-          {/* Large Item */}
-          <div className="md:col-span-2 relative group overflow-hidden border border-outline-variant/30 bg-surface-container-low p-8 flex flex-col justify-end min-h-[400px]">
-            <div 
-              className="absolute inset-0 bg-cover bg-center transition-all duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity hover:mix-blend-normal" 
-              style={{ 
-                backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBllQHgzZnURsKfao1GNCG0tNKOcrSzTr4AWLi9LtIb-VEsIo8F8EV1A9Vje8GUWTP9831JgN0d0OyHLwc75uw2tmY8gMtJGZb-9z6UjNttz_sugsaL3L-6nicl7f2CvqJCgw23LtP8p_HOIa7loMjhzd7U8NOxZLEm-uloWgn3P5kkO00zWHiONuN6X_bF71Y-0mC5VSht00yt6LZ2Zgw-aPCTb3_aQKkZVZlk25iy8I5UGYKfSbdC')" 
-              }}
-            ></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
-            <div className="relative z-10">
-              <span className="text-label-sm text-primary uppercase tracking-wider block mb-1">TRADITIONAL METHOD</span>
-              <h3 className="text-headline-md font-headline-md text-primary mb-2">Master Weavers</h3>
-              <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
-                Each saree is a unique masterpiece, taking anywhere from weeks to months to complete on traditional handlooms.
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+            <div className="bg-surface-container-lowest border border-outline-variant/20 p-6">
+              <span className="text-label-sm font-label-sm uppercase tracking-widest text-primary block mb-3">
+                Vision
+              </span>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                Natural dyeing should become a respected benchmark for wellness-first luxury.
+              </p>
+            </div>
+            <div className="bg-surface-container-lowest border border-outline-variant/20 p-6">
+              <span className="text-label-sm font-label-sm uppercase tracking-widest text-primary block mb-3">
+                Mission
+              </span>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                Protect craft, prove premium quality, and preserve cleaner textile ecosystems.
+              </p>
+            </div>
+            <div className="bg-surface-container-lowest border border-outline-variant/20 p-6">
+              <span className="text-label-sm font-label-sm uppercase tracking-widest text-primary block mb-3">
+                Retail Promise
+              </span>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                Give boutiques a richer story than generic synthetic sarees can offer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="stories"
+        className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-16 md:py-20 border-y border-outline-variant/20"
+      >
+        <div className="max-w-container-max mx-auto">
+          <div className="max-w-3xl mb-12">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
+              Extended Stories
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-primary mb-4">
+              The homepage gives the shorter version. Each full narrative lives on its own page.
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed">
+              The three detailed PDF narratives are summarized here and linked out through
+              dedicated “View more” pages so the site stays readable without hiding the full story.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {storyCards.map((story) => (
+              <article
+                key={story.slug}
+                className="flex flex-col bg-surface-container-lowest border border-outline-variant/20 p-7"
+              >
+                <span className="text-label-sm font-label-sm uppercase tracking-[0.18em] text-primary block mb-3">
+                  {story.eyebrow}
+                </span>
+                <h3 className="text-headline-md font-headline-md text-on-surface mb-4">
+                  {story.title}
+                </h3>
+                <p className="text-body-md text-on-surface-variant leading-relaxed mb-6">
+                  {story.summary}
+                </p>
+                <div className="mb-8 border-t border-outline-variant/20 pt-5">
+                  <p className="text-sm italic text-on-surface-variant/80 leading-relaxed">
+                    {story.highlights.join(' · ')}
+                  </p>
+                </div>
+                <Link
+                  to={`/stories/${story.slug}`}
+                  className="mt-auto inline-flex items-center gap-2 text-label-sm font-label-sm uppercase tracking-widest text-primary border-b border-primary pb-1 self-start hover:text-surface-tint hover:border-surface-tint transition-colors"
+                >
+                  View More
+                  <span className="material-symbols-outlined text-base">north_east</span>
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8">
+          <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
+              Vision & Mission
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
+              A brand built to make natural dyeing credible, scalable, and beautiful.
+            </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-body-lg font-semibold text-on-surface mb-3">Vision</h3>
+                <div className="space-y-3">
+                  {purposeContent.vision.map((item) => (
+                    <p key={item} className="text-body-md text-on-surface-variant leading-relaxed">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-body-lg font-semibold text-on-surface mb-3">Mission</h3>
+                <div className="space-y-3">
+                  {purposeContent.mission.map((item) => (
+                    <p key={item} className="text-body-md text-on-surface-variant leading-relaxed">
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-primary text-on-primary p-8 md:p-10">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-white/80 block mb-4">
+              Taglines & Pitch
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-white mb-6">
+              A clearer public-facing voice for the brand.
+            </h2>
+            <div className="space-y-5">
+              <div>
+                <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
+                  Primary Message
+                </span>
+                <p className="text-body-lg leading-relaxed">{taglineContent.primary}</p>
+              </div>
+              <div>
+                <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
+                  Campaign Message
+                </span>
+                <p className="text-body-lg leading-relaxed">{taglineContent.campaign}</p>
+              </div>
+              <div>
+                <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
+                  Retail Partner Promise
+                </span>
+                <p className="text-body-md text-white/84 leading-relaxed">
+                  {taglineContent.retailPromise}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-16 md:py-20 border-y border-outline-variant/20">
+        <div className="max-w-container-max mx-auto">
+          <div className="max-w-3xl mb-12">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
+              Brand Pillars
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-primary mb-4">
+              Four ideas hold the entire Nithilam promise together.
+            </h2>
+            <p className="text-body-lg text-on-surface-variant leading-relaxed">
+              These pillars come directly from the brand PDFs and define how the site should
+              explain craft, responsibility, and product value.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+            {pillars.map((pillar) => (
+              <article
+                key={pillar.title}
+                className="bg-surface-container-lowest border border-outline-variant/20 p-6"
+              >
+                <h3 className="text-headline-md font-headline-md text-on-surface mb-4">
+                  {pillar.title}
+                </h3>
+                <p className="text-body-md text-on-surface-variant leading-relaxed">
+                  {pillar.text}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
+        <div className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-8">
+          <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
+            <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
+              Value Proposition
+            </span>
+            <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
+              A partner story shaped for boutiques and wholesale buyers.
+            </h2>
+            <div className="space-y-5">
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                {valueProposition.partner}
+              </p>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                {valueProposition.offering}
+              </p>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                {valueProposition.businessImpact}
               </p>
             </div>
           </div>
 
-          {/* Stacked Items */}
-          <div className="flex flex-col gap-gutter">
-            
-            {/* Top Stack Item */}
-            <div className="flex-1 relative group overflow-hidden border border-outline-variant/30 bg-surface-container-low p-6 flex flex-col justify-end min-h-[250px]">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity hover:mix-blend-normal" 
-                style={{ 
-                  backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSA-a-UYt5KLBJQUfhUy2sYkTV6h2GFsdE_1VEyAgo7fA4NShkfo1C4xKpEWRmQ9DsOhbJAWfpWkKdfJmPkDcV9MabSLHGDtyJdQG8IbUQQ3gjkqxlJB0xOGT1st1d5nXFJ9m1BmLAKFsnsV0c5sxH_7CPSNQ9pDeVkGcTEce_TmMxvxyG8DCYeKEMBvnhIm_0qqt7B331lhdjU87W102OZnTkncIuPCv24MIpN2xYzY9KyvZyU1cW')" 
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
-              <div className="relative z-10">
-                <span className="text-label-sm text-primary uppercase tracking-wider block mb-0.5">EXQUISITE MATERIALS</span>
-                <h3 className="text-headline-md font-headline-md text-primary text-xl mb-1">Pure Zari</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant text-sm">
-                  Authentic metallic threads sourced for lasting brilliance and shine.
-                </p>
-              </div>
+          <div className="space-y-6">
+            <div className="bg-surface-container-low border border-outline-variant/20 p-7">
+              <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
+                Target Audience
+              </span>
+              <p className="text-body-md text-on-surface-variant leading-relaxed mb-4">
+                {audienceContent.primary}
+              </p>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                {audienceContent.wearer}
+              </p>
             </div>
 
-            {/* Bottom Stack Item */}
-            <div className="flex-1 relative group overflow-hidden border border-outline-variant/30 bg-surface-container-low p-6 flex flex-col justify-end min-h-[250px]">
-              <div 
-                className="absolute inset-0 bg-cover bg-center transition-all duration-1000 group-hover:scale-105 opacity-80 mix-blend-luminosity hover:mix-blend-normal" 
-                style={{ 
-                  backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDToT14zDLJ5M5Nte30ktG9_Jyb_M16kGjpQAMsqsVdiLJosqaw1FaW0iyRS47CQ8MZAIq7yjiQnTVeHZqDLcTVW5iUHsCeSNYTXA24Cvy3IK5mi0Sug-06BEAnrlm5nrdJo9pprFuqKVuIymjdDgmDUre42I_jnfhN9rqgx6rKh9BIj-IaJZsKBx02wc5ZlpqmMc-zaaR2fzCeNzf2TbTkOw5Tj_PAv2biZYjrBU8NfCXDzKs0B33K')" 
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
-              <div className="relative z-10">
-                <span className="text-label-sm text-primary uppercase tracking-wider block mb-0.5">HERITAGE PALETTE</span>
-                <h3 className="text-headline-md font-headline-md text-primary text-xl mb-1">Natural Dyes</h3>
-                <p className="text-body-md font-body-md text-on-surface-variant text-sm">
-                  Rich, fade-resistant colors achieved through time-honored organic techniques.
-                </p>
+            <div className="bg-surface-container-low border border-outline-variant/20 p-7">
+              <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
+                Brand Personality & Tone
+              </span>
+              <div className="space-y-3 mb-5">
+                {voiceContent.personality.map((item) => (
+                  <p key={item} className="text-body-md text-on-surface-variant leading-relaxed">
+                    {item}
+                  </p>
+                ))}
               </div>
+              <p className="text-body-md text-on-surface-variant leading-relaxed">
+                {voiceContent.tone}
+              </p>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* Showcase CTA Banner */}
-      <section className="bg-primary text-on-primary px-margin-mobile md:px-margin-desktop py-16 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-headline-lg font-headline-lg mb-4 text-white">Direct Sourcing for Premium Retail Partners</h2>
-          <p className="text-body-md mb-8 opacity-90 max-w-xl mx-auto">
-            We provide boutique owners, global retailers, and wholesale distributors direct access to the finest handlooms of India. Browse our collections and request detailed catalog information.
+      <section className="bg-primary text-on-primary px-margin-mobile md:px-margin-desktop py-16 md:py-20">
+        <div className="max-w-container-max mx-auto text-center">
+          <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-white/70 block mb-4">
+            Wholesale Next Step
+          </span>
+          <h2 className="text-headline-lg font-headline-lg text-white mb-4">
+            Explore the catalogue, then use the detailed stories to support the brand conversation.
+          </h2>
+          <p className="text-body-lg text-white/82 max-w-3xl mx-auto leading-relaxed mb-8">
+            The site now holds the concise homepage summary plus the complete long-form brand
+            narratives for deeper retail storytelling.
           </p>
-          <Link 
-            to="/collections" 
-            className="inline-block bg-background text-primary border border-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-surface-container transition-colors duration-300"
-          >
-            Explore B2B Catalogue
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/collections"
+              className="inline-flex items-center justify-center bg-background text-primary px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-surface-container transition-colors"
+            >
+              Browse Catalogue
+            </Link>
+            <Link
+              to="/stories/the-nithilam-story"
+              className="inline-flex items-center justify-center border border-white/35 text-white px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-white/10 transition-colors"
+            >
+              Open First Story
+            </Link>
+          </div>
         </div>
       </section>
     </div>

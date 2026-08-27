@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import Home from './pages/Home';
 import Catalogue from './pages/Catalogue';
 import ProductDetails from './pages/ProductDetails';
+import StoryDetail from './pages/StoryDetail';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,17 @@ function MainAppShell() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8 items-center h-full">
             <Link 
+              to="/" 
+              className={`font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest ${
+                isLinkActive('/') 
+                  ? 'text-primary border-b-2 border-primary pb-1 font-bold' 
+                  : 'text-on-surface-variant hover:text-primary'
+              }`}
+            >
+              Home
+            </Link>
+
+            <Link 
               to="/collections" 
               className={`font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest ${
                 isLinkActive('/collections') 
@@ -54,20 +66,22 @@ function MainAppShell() {
               Wholesale Catalog
             </Link>
 
-            <a 
-              href="javascript:void(0)" 
-              onClick={() => alert("Our heritage and weaving craftsmanship highlights are detailed on the home page.")}
-              className="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest"
-            >
-              Craftsmanship
-            </a>
-            
-            <a 
-              href="javascript:void(0)" 
-              onClick={() => alert("Nithilam Sarees represents three generations of traditional weavers based in Southern India. We support local handloom weaver co-operatives.")}
-              className="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest"
+            <Link 
+              to="/stories/the-nithilam-story"
+              className={`font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest ${
+                location.pathname.startsWith('/stories')
+                  ? 'text-primary border-b-2 border-primary pb-1 font-bold'
+                  : 'text-on-surface-variant hover:text-primary'
+              }`}
             >
               Our Story
+            </Link>
+            
+            <a 
+              href="/#stories"
+              className="text-on-surface-variant hover:text-primary font-medium transition-colors duration-300 text-label-sm font-label-sm uppercase tracking-widest"
+            >
+              View More
             </a>
           </nav>
 
@@ -89,6 +103,15 @@ function MainAppShell() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-outline-variant/30 bg-surface px-margin-mobile py-6 flex flex-col gap-4 animate-fade-in shadow-lg">
             <Link 
+              to="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-body-lg uppercase font-semibold py-2 ${
+                isLinkActive('/') ? 'text-primary' : 'text-on-surface-variant'
+              }`}
+            >
+              Home
+            </Link>
+            <Link 
               to="/collections" 
               onClick={() => setMobileMenuOpen(false)}
               className={`text-body-lg uppercase font-semibold py-2 ${
@@ -97,25 +120,21 @@ function MainAppShell() {
             >
               Wholesale Catalog
             </Link>
-            <a 
-              href="javascript:void(0)"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                alert("Our weaving craftsmanship highlights are detailed on the home page.");
-              }}
-              className="text-body-lg uppercase font-semibold text-on-surface-variant py-2"
-            >
-              Craftsmanship
-            </a>
-            <a 
-              href="javascript:void(0)"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                alert("Nithilam Sarees represents three generations of traditional weavers based in Southern India.");
-              }}
-              className="text-body-lg uppercase font-semibold text-on-surface-variant py-2"
+            <Link 
+              to="/stories/the-nithilam-story"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-body-lg uppercase font-semibold py-2 ${
+                location.pathname.startsWith('/stories') ? 'text-primary' : 'text-on-surface-variant'
+              }`}
             >
               Our Story
+            </Link>
+            <a 
+              href="/#stories"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-body-lg uppercase font-semibold text-on-surface-variant py-2"
+            >
+              View More
             </a>
             <div className="border-t border-outline-variant/20 pt-4 mt-2">
               <span className="text-label-sm text-primary uppercase block mb-1">Direct Wholesale Access</span>
@@ -131,6 +150,7 @@ function MainAppShell() {
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Catalogue />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/stories/:slug" element={<StoryDetail />} />
           <Route path="*" element={
             <div className="text-center py-20 px-4">
               <span className="material-symbols-outlined text-6xl text-primary mb-4">error</span>
@@ -152,42 +172,38 @@ function MainAppShell() {
           <div className="md:col-span-2">
             <div className="text-headline-md font-headline-md text-primary mb-4">Nithilam Sarees</div>
             <p className="text-body-md font-body-md text-on-surface-variant max-w-sm">
-              Providing premium, hand-woven luxury textiles and sarees to boutique owners, global retailers, and wholesale distributors. Preserving traditional craftsmanship.
+              Natural-dyed sarees for conscious retail partners, built around botanical colour, artisan dignity, and a cleaner textile story from Erode.
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-label-sm font-label-sm text-on-surface uppercase tracking-widest mb-2 font-bold">Legal & Wholesale</h4>
-            <a 
-              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" 
-              href="javascript:void(0)"
-              onClick={() => alert("Wholesale purchases are subject to verification of retail status. Catalog details are supplied upon approval.")}
+            <h4 className="text-label-sm font-label-sm text-on-surface uppercase tracking-widest mb-2 font-bold">Discover</h4>
+            <Link
+              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4"
+              to="/stories/the-nithilam-story"
             >
-              Wholesale Terms
-            </a>
-            <a 
-              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" 
-              href="javascript:void(0)"
-              onClick={() => alert("We ship internationally via DHL Express, FedEx, and Air Cargo. Buyers are responsible for customs clearances and local duties.")}
+              Brand Story
+            </Link>
+            <a
+              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4"
+              href="/#stories"
             >
-              Shipping Policy
+              Story Summaries
             </a>
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-label-sm font-label-sm text-on-surface uppercase tracking-widest mb-2 font-bold font-sans">Support & Contact</h4>
-            <a 
-              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" 
-              href="javascript:void(0)"
-              onClick={() => alert("All pieces carry Silk Mark certifications where applicable. We guarantee 100% genuine silver/gold zari threads as specified in our catalog specs.")}
+            <h4 className="text-label-sm font-label-sm text-on-surface uppercase tracking-widest mb-2 font-bold font-sans">Wholesale Focus</h4>
+            <Link
+              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4"
+              to="/collections"
             >
-              Quality Guarantee
-            </a>
-            <a 
-              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4" 
-              href="javascript:void(0)"
-              onClick={() => alert("Contact our wholesale team via email at: trade@nithilamsarees.com or phone: +91 44 2480 0000")}
+              Browse Catalogue
+            </Link>
+            <Link
+              className="text-body-md font-body-md text-on-surface-variant hover:text-primary transition-colors underline decoration-1 underline-offset-4"
+              to="/stories/the-founders-journey"
             >
-              Contact Us
-            </a>
+              Founder’s Promise
+            </Link>
           </div>
         </div>
         <div className="px-margin-mobile md:px-margin-desktop py-6 border-t border-outline-variant/20 max-w-container-max mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-on-surface-variant/60 gap-4">
