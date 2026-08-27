@@ -17,7 +17,39 @@ function ScrollToTop() {
 
 function MainAppShell() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = React.useRef(0);
   const location = useLocation();
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Always show at the top of the page
+      if (currentScrollY < 10) {
+        setShowHeader(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+      
+      const diff = currentScrollY - lastScrollY.current;
+      
+      // Scroll threshold of 5px to prevent micro-jitters
+      if (Math.abs(diff) > 5) {
+        if (diff > 0) {
+          // Scrolling down - hide header
+          setShowHeader(false);
+        } else {
+          // Scrolling up - show header
+          showHeader || setShowHeader(true);
+        }
+        lastScrollY.current = currentScrollY;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [showHeader]);
 
   const handleMobileMenuToggle = () => {
     setMobileMenuOpen(prev => !prev);
@@ -27,19 +59,26 @@ function MainAppShell() {
     return location.pathname === path;
   };
 
+  const shouldShowHeader = showHeader || mobileMenuOpen;
+
   return (
     <div className="min-h-screen flex flex-col font-body-md text-on-surface bg-background">
       <ScrollToTop />
       
       {/* Header */}
-      <header className="bg-surface border-b border-outline-variant/30 sticky top-0 z-50 transition-all duration-300 w-full">
+      <header className={`bg-surface border-b border-outline-variant/30 sticky top-0 z-50 transition-transform duration-300 w-full ${shouldShowHeader ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-headline-md font-headline-md font-black text-primary tracking-tight"
+            className="flex items-center"
+            aria-label="Nithilam Sarees Home"
           >
-            Nithilam Sarees
+            <img
+              src="/nithilam-logo.png"
+              alt="Nithilam Natural Dyed Cotton"
+              className="h-16 md:h-20 w-auto object-contain"
+            />
           </Link>
           
           {/* Desktop Navigation */}
@@ -170,7 +209,11 @@ function MainAppShell() {
       <footer className="bg-surface-container-highest border-t border-outline-variant/30 mt-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
           <div className="md:col-span-2">
-            <div className="text-headline-md font-headline-md text-primary mb-4">Nithilam Sarees</div>
+            <img
+              src="/nithilam-logo.png"
+              alt="Nithilam Natural Dyed Cotton"
+              className="h-24 w-auto object-contain mb-4"
+            />
             <p className="text-body-md font-body-md text-on-surface-variant max-w-sm">
               Natural-dyed sarees for conscious retail partners, built around botanical colour, artisan dignity, and a cleaner textile story from Erode.
             </p>

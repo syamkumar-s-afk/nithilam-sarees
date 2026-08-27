@@ -24,10 +24,9 @@ export default function Home() {
           <h1 className="text-display-lg-mobile md:text-display-lg font-display-lg text-white max-w-5xl leading-tight mb-6">
             A complete Nithilam story rooted in botanical colour, artisan dignity, and clean-water craft.
           </h1>
-          <p className="text-body-lg font-body-lg text-white/82 max-w-3xl leading-relaxed mb-10">
-            Built from the NithilamNatural PDFs, this site now brings together the brand story,
-            mission, partner promise, tone of voice, and the extended narratives behind the
-            brand’s work in Erode.
+          <p className="text-body-lg font-body-lg text-white/90 max-w-3xl leading-relaxed mb-10">
+            Discover a brand shaped by botanical colour, artisan dignity, and a more thoughtful
+            way of making textiles in Erode.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -96,14 +95,14 @@ export default function Home() {
         <div className="max-w-container-max mx-auto">
           <div className="max-w-3xl mb-12">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
-              Extended Stories
+              Brand Story
             </span>
             <h2 className="text-headline-lg font-headline-lg text-primary mb-4">
-              The homepage gives the shorter version. Each full narrative lives on its own page.
+              A short introduction here, with the full narrative available only when needed.
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed">
-              The three detailed PDF narratives are summarized here and linked out through
-              dedicated “View more” pages so the site stays readable without hiding the full story.
+              These three pages give structure to the Nithilam brand story without turning the
+              homepage into a long document.
             </p>
           </div>
 
@@ -122,16 +121,11 @@ export default function Home() {
                 <p className="text-body-md text-on-surface-variant leading-relaxed mb-6">
                   {story.summary}
                 </p>
-                <div className="mb-8 border-t border-outline-variant/20 pt-5">
-                  <p className="text-sm italic text-on-surface-variant/80 leading-relaxed">
-                    {story.highlights.join(' · ')}
-                  </p>
-                </div>
                 <Link
                   to={`/stories/${story.slug}`}
                   className="mt-auto inline-flex items-center gap-2 text-label-sm font-label-sm uppercase tracking-widest text-primary border-b border-primary pb-1 self-start hover:text-surface-tint hover:border-surface-tint transition-colors"
                 >
-                  View More
+                  Read Story
                   <span className="material-symbols-outlined text-base">north_east</span>
                 </Link>
               </article>
@@ -144,10 +138,10 @@ export default function Home() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8">
           <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
-              Vision & Mission
+              Direction
             </span>
             <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
-              A brand built to make natural dyeing credible, scalable, and beautiful.
+              A brand built around natural dyeing, modern retail relevance, and lasting trust.
             </h2>
             <div className="space-y-6">
               <div>
@@ -175,30 +169,37 @@ export default function Home() {
 
           <div className="bg-primary text-on-primary p-8 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-white/80 block mb-4">
-              Taglines & Pitch
+              Why Nithilam
             </span>
             <h2 className="text-headline-lg font-headline-lg text-white mb-6">
-              A clearer public-facing voice for the brand.
+              Natural dyeing, thoughtful craft, and a story your customers can feel.
             </h2>
             <div className="space-y-5">
               <div>
                 <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
-                  Primary Message
+                  Skin-Safe Comfort
                 </span>
-                <p className="text-body-lg leading-relaxed">{taglineContent.primary}</p>
+                <p className="text-body-lg leading-relaxed">
+                  Sarees designed with breathable fabrics, botanical colour, and everyday ease in
+                  mind.
+                </p>
               </div>
               <div>
                 <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
-                  Campaign Message
+                  Responsible Craft
                 </span>
-                <p className="text-body-lg leading-relaxed">{taglineContent.campaign}</p>
+                <p className="text-body-lg leading-relaxed">
+                  A slower process that values artisan skill, safer workspaces, and cleaner dyeing
+                  practices.
+                </p>
               </div>
               <div>
                 <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
-                  Retail Partner Promise
+                  Retail Relevance
                 </span>
                 <p className="text-body-md text-white/84 leading-relaxed">
-                  {taglineContent.retailPromise}
+                  For boutiques and wholesale partners, Nithilam offers a refined product story
+                  rooted in quality, trust, and modern conscious luxury.
                 </p>
               </div>
             </div>
@@ -216,8 +217,8 @@ export default function Home() {
               Four ideas hold the entire Nithilam promise together.
             </h2>
             <p className="text-body-lg text-on-surface-variant leading-relaxed">
-              These pillars come directly from the brand PDFs and define how the site should
-              explain craft, responsibility, and product value.
+              These pillars shape how Nithilam brings together craft, responsibility, and product
+              value.
             </p>
           </div>
 
@@ -243,10 +244,10 @@ export default function Home() {
         <div className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-8">
           <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
-              Value Proposition
+              Retail Value
             </span>
             <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
-              A partner story shaped for boutiques and wholesale buyers.
+              A concise partner proposition for boutiques and wholesale buyers.
             </h2>
             <div className="space-y-5">
               <p className="text-body-md text-on-surface-variant leading-relaxed">
@@ -264,7 +265,7 @@ export default function Home() {
           <div className="space-y-6">
             <div className="bg-surface-container-low border border-outline-variant/20 p-7">
               <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
-                Target Audience
+                Audience
               </span>
               <p className="text-body-md text-on-surface-variant leading-relaxed mb-4">
                 {audienceContent.primary}
@@ -276,7 +277,7 @@ export default function Home() {
 
             <div className="bg-surface-container-low border border-outline-variant/20 p-7">
               <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
-                Brand Personality & Tone
+                Brand Voice
               </span>
               <div className="space-y-3 mb-5">
                 {voiceContent.personality.map((item) => (
@@ -302,8 +303,8 @@ export default function Home() {
             Explore the catalogue, then use the detailed stories to support the brand conversation.
           </h2>
           <p className="text-body-lg text-white/82 max-w-3xl mx-auto leading-relaxed mb-8">
-            The site now holds the concise homepage summary plus the complete long-form brand
-            narratives for deeper retail storytelling.
+            Explore the collection, understand the craft, and discover the values behind the
+            brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

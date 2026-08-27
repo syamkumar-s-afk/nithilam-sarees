@@ -4,7 +4,7 @@ export const storyCards = [
     eyebrow: 'Origin & Meaning',
     title: 'The Meaning of Nithilam: Pure as a Pearl',
     summary:
-      'Nithilam takes its name from the classical Tamil word for pearl, a symbol of slow formation, natural lustre, and unforced beauty. The brand applies that same philosophy to sarees shaped by botanical dyes, patient handcraft, and skin-safe purity.',
+      'Nithilam takes its name from the classical Tamil word for pearl, expressing slow craft, natural beauty, and quiet refinement.',
     highlights: [
       '100% plant-based color philosophy',
       'Living tones instead of flat synthetic pigment',
@@ -16,7 +16,7 @@ export const storyCards = [
     eyebrow: 'Place & Purpose',
     title: 'The Legacy of Erode: Reclaiming Clean Waters',
     summary:
-      'Rooted in Erode, Nithilam reconnects textile making with the region’s older botanical dye traditions. The work is positioned as both a design choice and an environmental restoration effort that protects rivers, soil, and artisan well-being.',
+      'Rooted in Erode, this story connects textile craft with botanical dye traditions, cleaner water practices, and artisan well-being.',
     highlights: [
       'Zero synthetic dye compounds',
       'Biodegradable wash-water approach',
@@ -28,7 +28,7 @@ export const storyCards = [
     eyebrow: 'Founder’s Vision',
     title: 'The Founder’s Journey: A Promise to Skin & Soil',
     summary:
-      'The founder’s vision begins with a simple question: if people care about clean food and skincare, why not clean textiles too? Nithilam answers with sarees designed to respect both the wearer’s skin and the land that sustains the craft.',
+      'The founder’s vision brings together skin-safe comfort, responsible materials, and a more thoughtful approach to textile making.',
     highlights: [
       'Comfort-first natural fibers and finishes',
       'Shared value for artisans, boutiques, and wearers',
@@ -223,5 +223,5 @@ export const taglineContent = {
   primary: 'Natural Dyed Luxury for Conscious Living.',
   campaign: 'Natural Dyed Luxury for Majestic Queens.',
   retailPromise:
-    'For retail partners, Nithilam offers a trust-building story rooted in clean rivers, safer artisan work, and naturally dyed sarees that feel credible both emotionally and commercially.',
+    'Nithilam gives retail partners a credible story built on natural dyeing, responsible craft, and everyday luxury.',
 };
