@@ -31,10 +31,10 @@ export default function StoryDetail() {
     <main className="page-transition">
       <section className="relative overflow-hidden bg-surface-container-low border-b border-outline-variant/20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(61,0,12,0.08),_transparent_45%),linear-gradient(135deg,_rgba(252,249,243,1)_0%,_rgba(229,226,220,0.65)_100%)]" />
-        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 md:py-28">
+        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-28">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-label-sm font-label-sm uppercase tracking-widest text-primary mb-8 hover:opacity-80 transition-opacity"
+            className="inline-flex items-center gap-2 text-label-sm font-label-sm uppercase tracking-widest text-primary mb-4 md:mb-8 hover:opacity-80 transition-opacity"
           >
             <span className="material-symbols-outlined text-base">west</span>
             Back to Home
@@ -51,13 +51,13 @@ export default function StoryDetail() {
         </div>
       </section>
 
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 items-start">
-          <div className="space-y-10">
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-10 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-6 lg:gap-10 items-start">
+          <div className="space-y-6 md:space-y-10">
             {story.sections.map((section) => (
               <article
                 key={section.heading}
-                className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10"
+                className="bg-surface-container-lowest border border-outline-variant/20 p-6 md:p-10"
               >
                 <h2 className="text-headline-md font-headline-md text-primary mb-5">
                   {section.heading}
@@ -75,8 +75,8 @@ export default function StoryDetail() {
               </article>
             ))}
 
-            <div className="bg-primary text-on-primary p-8 md:p-10">
-              <span className="text-label-sm font-label-sm uppercase tracking-[0.2em] block mb-3 text-white/80">
+            <div className="bg-primary text-on-primary p-6 md:p-10">
+              <span className="text-label-sm font-label-sm uppercase tracking-[0.2em] block mb-2 text-white/80">
                 Closing Thought
               </span>
               <p className="text-body-lg leading-relaxed max-w-3xl">{story.closing}</p>

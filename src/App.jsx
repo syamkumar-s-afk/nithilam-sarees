@@ -67,7 +67,7 @@ function MainAppShell() {
       
       {/* Header */}
       <header className={`bg-surface border-b border-outline-variant/30 sticky top-0 z-50 transition-transform duration-300 w-full ${shouldShowHeader ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+        <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-3 md:py-6 max-w-container-max mx-auto">
           {/* Logo */}
           <Link 
             to="/" 
@@ -140,7 +140,7 @@ function MainAppShell() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-outline-variant/30 bg-surface px-margin-mobile py-6 flex flex-col gap-4 animate-fade-in shadow-lg">
+          <div className="md:hidden border-t border-outline-variant/30 bg-surface px-margin-mobile py-4 flex flex-col gap-3 animate-fade-in shadow-lg">
             <Link 
               to="/" 
               onClick={() => setMobileMenuOpen(false)}

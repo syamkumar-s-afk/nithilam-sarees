@@ -3,6 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --section-gap: 48px;
+    --stack-lg: 20px;
+    --gutter: 16px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --section-gap: 120px;
+      --stack-lg: 32px;
+      --gutter: 32px;
+    }
+  }
+
   body {
     @apply bg-background text-on-surface antialiased;
   }

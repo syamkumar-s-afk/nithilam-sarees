@@ -66,10 +66,10 @@ export default {
         "container-max": "1440px",
         "stack-md": "16px",
         "margin-desktop": "80px",
-        "section-gap": "120px",
+        "section-gap": "var(--section-gap, 120px)",
         "stack-sm": "8px",
-        "stack-lg": "32px",
-        "gutter": "32px"
+        "stack-lg": "var(--stack-lg, 32px)",
+        "gutter": "var(--gutter, 32px)"
       },
       fontFamily: {
         "headline-md": ["Libre Caslon Text", "serif"],

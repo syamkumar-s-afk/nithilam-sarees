@@ -17,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(28,22,18,0.92)_0%,_rgba(61,44,31,0.82)_38%,_rgba(122,98,71,0.52)_100%),url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(229,226,220,0.10),_transparent_46%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,_rgba(17,14,11,0.12),_rgba(17,14,11,0.28))]" />
-        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 md:py-32 w-full">
+        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-32 w-full">
           <span className="text-label-sm font-label-sm text-primary-fixed uppercase tracking-[0.28em] mb-5 block">
             Natural Dyed Luxury for Conscious Living
           </span>
@@ -45,9 +45,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-8">
-          <div className="bg-surface-container-low border border-outline-variant/20 p-8 md:p-10">
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-4 md:gap-8">
+          <div className="bg-surface-container-low border border-outline-variant/20 p-6 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
               Core Purpose
             </span>
@@ -90,10 +90,10 @@ export default function Home() {
 
       <section
         id="stories"
-        className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-16 md:py-20 border-y border-outline-variant/20"
+        className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-8 md:py-20 border-y border-outline-variant/20"
       >
         <div className="max-w-container-max mx-auto">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-6 md:mb-12">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
               Brand Story
             </span>
@@ -106,11 +106,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
             {storyCards.map((story) => (
               <article
                 key={story.slug}
-                className="flex flex-col bg-surface-container-lowest border border-outline-variant/20 p-7"
+                className="flex flex-col bg-surface-container-lowest border border-outline-variant/20 p-5 md:p-7"
               >
                 <span className="text-label-sm font-label-sm uppercase tracking-[0.18em] text-primary block mb-3">
                   {story.eyebrow}
@@ -134,16 +134,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8">
-          <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-4 md:gap-8">
+          <div className="bg-surface-container-lowest border border-outline-variant/20 p-6 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
               Direction
             </span>
             <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
               A brand built around natural dyeing, modern retail relevance, and lasting trust.
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div>
                 <h3 className="text-body-lg font-semibold text-on-surface mb-3">Vision</h3>
                 <div className="space-y-3">
@@ -167,14 +167,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-primary text-on-primary p-8 md:p-10">
+          <div className="bg-primary text-on-primary p-6 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-white/80 block mb-4">
               Why Nithilam
             </span>
             <h2 className="text-headline-lg font-headline-lg text-white mb-6">
               Natural dyeing, thoughtful craft, and a story your customers can feel.
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-4 md:space-y-5">
               <div>
                 <span className="text-label-sm uppercase tracking-[0.2em] text-white/70 block mb-2">
                   Skin-Safe Comfort
@@ -207,9 +207,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-16 md:py-20 border-y border-outline-variant/20">
+      <section className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-8 md:py-20 border-y border-outline-variant/20">
         <div className="max-w-container-max mx-auto">
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-6 md:mb-12">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
               Brand Pillars
             </span>
@@ -222,11 +222,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
             {pillars.map((pillar) => (
               <article
                 key={pillar.title}
-                className="bg-surface-container-lowest border border-outline-variant/20 p-6"
+                className="bg-surface-container-lowest border border-outline-variant/20 p-5 md:p-6"
               >
                 <h3 className="text-headline-md font-headline-md text-on-surface mb-4">
                   {pillar.title}
@@ -240,16 +240,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-20">
-        <div className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-8">
-          <div className="bg-surface-container-lowest border border-outline-variant/20 p-8 md:p-10">
+      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-20">
+        <div className="grid grid-cols-1 xl:grid-cols-[1.1fr_0.9fr] gap-4 md:gap-8">
+          <div className="bg-surface-container-lowest border border-outline-variant/20 p-6 md:p-10">
             <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
               Retail Value
             </span>
             <h2 className="text-headline-lg font-headline-lg text-primary mb-6">
               A concise partner proposition for boutiques and wholesale buyers.
             </h2>
-            <div className="space-y-5">
+            <div className="space-y-3.5 md:space-y-5">
               <p className="text-body-md text-on-surface-variant leading-relaxed">
                 {valueProposition.partner}
               </p>
@@ -262,8 +262,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-surface-container-low border border-outline-variant/20 p-7">
+          <div className="space-y-4 md:space-y-6">
+            <div className="bg-surface-container-low border border-outline-variant/20 p-5 md:p-7">
               <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
                 Audience
               </span>
@@ -275,7 +275,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-surface-container-low border border-outline-variant/20 p-7">
+            <div className="bg-surface-container-low border border-outline-variant/20 p-5 md:p-7">
               <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-4">
                 Brand Voice
               </span>
@@ -294,7 +294,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-primary text-on-primary px-margin-mobile md:px-margin-desktop py-16 md:py-20">
+      <section className="bg-primary text-on-primary px-margin-mobile md:px-margin-desktop py-8 md:py-20">
         <div className="max-w-container-max mx-auto text-center">
           <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-white/70 block mb-4">
             Wholesale Next Step
@@ -302,7 +302,7 @@ export default function Home() {
           <h2 className="text-headline-lg font-headline-lg text-white mb-4">
             Explore the catalogue, then use the detailed stories to support the brand conversation.
           </h2>
-          <p className="text-body-lg text-white/82 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-body-lg text-white/82 max-w-3xl mx-auto leading-relaxed mb-5 md:mb-8">
             Explore the collection, understand the craft, and discover the values behind the
             brand.
           </p>
