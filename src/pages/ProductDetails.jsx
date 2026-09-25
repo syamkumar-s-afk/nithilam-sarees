@@ -115,13 +115,13 @@ export default function ProductDetails() {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
-            className="fabric-zoom-container bg-surface-container-lowest border border-outline-variant/20 p-stack-md h-[500px] md:h-[700px] relative select-none"
+            className="fabric-zoom-container bg-surface-container-lowest border border-outline-variant/20 p-stack-md aspect-[3/2] w-full relative select-none"
           >
             <img 
               ref={imageRef}
               src={activeImage} 
               alt={product.name}
-              className="w-full h-full object-cover main-image"
+              className="w-full h-full object-contain main-image"
             />
             {/* Interactive Zoom Lens */}
             <div className="fabric-zoom-lens" style={lensStyle}></div>
@@ -138,7 +138,7 @@ export default function ProductDetails() {
                     activeImage === imgUrl ? 'border-primary shadow-sm' : 'border-outline-variant/20 hover:border-outline-variant'
                   }`}
                 >
-                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-contain" />
                 </button>
               ))}
               {/* Extra thumbnail for aesthetic padding if there is only 1 image */}
@@ -235,11 +235,11 @@ export default function ProductDetails() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
           {similarProducts.map((p) => (
             <Link key={p.id} to={`/product/${p.id}`} className="group cursor-pointer block">
-              <div className="bg-surface-container-lowest p-4 border border-outline-variant/10 mb-4 h-80 relative overflow-hidden">
+              <div className="bg-surface-container-lowest p-4 border border-outline-variant/10 mb-4 aspect-[3/2] w-full relative overflow-hidden">
                 <img 
                   src={p.mainImage} 
                   alt={p.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
                 />
               </div>

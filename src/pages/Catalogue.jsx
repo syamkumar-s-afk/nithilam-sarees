@@ -159,11 +159,11 @@ export default function Catalogue() {
             {filteredAndSortedProducts.map((product) => (
               <article key={product.id} className="group cursor-pointer flex flex-col h-full border border-outline-variant/10 p-2 md:p-4 bg-surface-container-lowest">
                 {/* Image Wrap */}
-                <Link to={`/product/${product.id}`} className="relative aspect-[3/4] bg-surface-container-low mb-2 md:mb-4 overflow-hidden block">
+                <Link to={`/product/${product.id}`} className="relative aspect-[3/2] bg-surface-container-low mb-2 md:mb-4 overflow-hidden block">
                   <img 
                     src={product.mainImage} 
                     alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 </Link>
