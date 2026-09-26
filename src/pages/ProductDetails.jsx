@@ -5,7 +5,18 @@ import InquiryModal from '../components/InquiryModal';
 
 export default function ProductDetails() {
   const { id } = useParams();
-  const product = products.find(p => p.id === id);
+  const decodedId = decodeURIComponent(id || '');
+  const product = products.find(p => 
+    p.id === id || 
+    p.id === decodedId || 
+    p.alias === id || 
+    p.alias === decodedId || 
+    p.sku === id || 
+    p.sku === decodedId || 
+    p.legacySku === id || 
+    p.legacySku === decodedId || 
+    p.name.toLowerCase() === decodedId.toLowerCase()
+  );
   
   // States
   const [activeImage, setActiveImage] = useState('');
@@ -42,10 +53,9 @@ export default function ProductDetails() {
     );
   }
 
-  // Similar products (filter current out, pick up to 3 of the same category, or else any)
+  // Similar products (filter current out, pick up to 3)
   const similarProducts = products
     .filter(p => p.id !== product.id)
-    .sort((a, b) => (a.category === product.category ? -1 : 1))
     .slice(0, 3);
 
   // Zoom logic
@@ -98,8 +108,6 @@ export default function ProductDetails() {
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant mb-stack-lg border-b border-outline-variant/10 pb-4">
         <Link className="hover:text-primary transition-colors" to="/collections">Wholesale Catalog</Link>
-        <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-        <span className="hover:text-primary transition-colors">{product.category} Silk</span>
         <span className="material-symbols-outlined text-[16px]">chevron_right</span>
         <span className="text-primary">{product.name}</span>
       </div>
@@ -177,32 +185,15 @@ export default function ProductDetails() {
 
             {/* Description */}
             <div className="mb-stack-lg">
-              <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-2">COLLECTION OVERVIEW</h3>
-              <p className="text-body-md font-body-md text-on-surface-variant leading-relaxed">
-                {product.description}
-              </p>
-            </div>
-
-            {/* Specifications (Bento style cards) */}
-            <div className="mb-stack-lg">
-              <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-2">TECHNICAL SPECIFICATIONS</h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
-                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Fabric</span>
-                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.fabric}</span>
-                </div>
-                <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
-                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Zari Type</span>
-                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.zariType}</span>
-                </div>
-                <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
-                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Weight</span>
-                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.weight}</span>
-                </div>
-                <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
-                  <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Colours Used</span>
-                  <span className="text-body-md font-body-md text-on-surface font-semibold">{product.colors}</span>
-                </div>
+              <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-3">COLLECTION OVERVIEW</h3>
+              <div className="text-body-md font-body-md text-on-surface-variant leading-relaxed space-y-3">
+                {product.description ? (
+                  product.description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))
+                ) : (
+                  <p className="italic text-on-surface-variant/60">No description available for this weave.</p>
+                )}
               </div>
             </div>
           </div>
@@ -243,10 +234,9 @@ export default function ProductDetails() {
                   loading="lazy"
                 />
               </div>
-              <h4 className="text-body-lg font-body-lg text-on-surface group-hover:text-primary transition-colors mb-1 font-semibold">
+              <h4 className="text-body-lg font-body-lg text-on-surface group-hover:text-primary transition-colors font-semibold">
                 {p.name}
               </h4>
-              <p className="text-body-md font-body-md text-on-surface-variant font-mono text-sm mb-1">{p.sku}</p>
             </Link>
           ))}
         </div>

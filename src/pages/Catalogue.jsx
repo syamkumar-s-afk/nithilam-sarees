@@ -3,61 +3,37 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/productsData';
 
 export default function Catalogue() {
-  const [selectedFabrics, setSelectedFabrics] = useState({
-    Kanjeevaram: true,
-    Banarasi: true,
-    Chanderi: true
-  });
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('newest'); // newest, price-high-low, price-low-high
 
-  const handleFabricToggle = (fabric) => {
-    setSelectedFabrics(prev => ({
-      ...prev,
-      [fabric]: !prev[fabric]
-    }));
-  };
-
-  const handleSelectAllFabrics = (val) => {
-    setSelectedFabrics({
-      Kanjeevaram: val,
-      Banarasi: val,
-      Chanderi: val
-    });
-  };
-
   const filteredAndSortedProducts = useMemo(() => {
-    // 1. Filter by Fabric
-    let result = products.filter(p => selectedFabrics[p.category]);
+    let result = products;
 
-    // 2. Filter by Search Query (Name or SKU)
+    // Filter by Search Query (Name or SKU)
     if (searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase();
       result = result.filter(p => 
         p.name.toLowerCase().includes(q) || 
-        p.sku.toLowerCase().includes(q) || 
-        p.category.toLowerCase().includes(q)
+        p.sku.toLowerCase().includes(q)
       );
     }
 
-    // 3. Sort
+    // Sort
     result = [...result].sort((a, b) => {
-      // For price comparison, use the minimum price from the pricing tiers
-      const priceA = a.pricingTiers[0].price;
-      const priceB = b.pricingTiers[0].price;
+      const priceA = a.pricingTiers?.[0]?.price || 0;
+      const priceB = b.pricingTiers?.[0]?.price || 0;
 
       if (sortBy === 'price-high-low') {
         return priceB - priceA;
       } else if (sortBy === 'price-low-high') {
         return priceA - priceB;
       } else {
-        // 'newest' / default: sorting by SKU or order of id
         return a.sku.localeCompare(b.sku);
       }
     });
 
     return result;
-  }, [selectedFabrics, searchQuery, sortBy]);
+  }, [searchQuery, sortBy]);
 
   const handleDownloadPriceList = () => {
     alert("Wholesale Price List requested. Our sales department will email the official PDF to your registered business email.");
@@ -65,7 +41,7 @@ export default function Catalogue() {
 
   return (
     <div className="flex-1 flex max-w-container-max mx-auto w-full page-transition">
-      {/* SideNavBar / Advanced Filters */}
+      {/* SideNavBar / Navigation */}
       <aside className="hidden md:flex flex-col w-64 border-r border-outline-variant/20 bg-surface-container-low py-8 space-y-stack-md sticky top-[89px] h-[calc(100vh-89px)] overflow-y-auto">
         <div className="px-6 mb-4">
           <h2 className="text-headline-sm font-headline-md text-primary mb-1">B2B Portal</h2>
@@ -77,43 +53,9 @@ export default function Catalogue() {
             <span className="material-symbols-outlined text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
             <span className="text-label-sm font-label-sm">Exclusive Showcase</span>
           </div>
-          
-          <div className="px-4 py-2 mt-4 border-t border-outline-variant/20 pt-4">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">Fabric Filter</h3>
-              <button 
-                onClick={() => {
-                  const allActive = Object.values(selectedFabrics).every(v => v);
-                  handleSelectAllFabrics(!allActive);
-                }}
-                className="text-[10px] uppercase text-primary tracking-widest underline underline-offset-2 hover:opacity-85"
-              >
-                {Object.values(selectedFabrics).every(v => v) ? 'Clear All' : 'Select All'}
-              </button>
-            </div>
-            
-            <div className="flex flex-col gap-3">
-              {Object.keys(selectedFabrics).map((fabric) => (
-                <label key={fabric} className="flex items-center gap-3 cursor-pointer group">
-                  <div className="relative flex items-center">
-                    <input 
-                      type="checkbox"
-                      checked={selectedFabrics[fabric]}
-                      onChange={() => handleFabricToggle(fabric)}
-                      className="peer sr-only"
-                    />
-                    <div className="w-4 h-4 border border-outline-variant rounded-none peer-checked:bg-primary peer-checked:border-primary transition-colors flex items-center justify-center">
-                      <span className="material-symbols-outlined text-[12px] text-white opacity-0 peer-checked:opacity-100 transition-opacity">
-                        check
-                      </span>
-                    </div>
-                  </div>
-                  <span className="text-body-md font-body-md group-hover:text-primary transition-colors">
-                    {fabric}
-                  </span>
-                </label>
-              ))}
-            </div>
+
+          <div className="px-4 py-4 mt-4 border-t border-outline-variant/20 text-xs text-on-surface-variant leading-relaxed">
+            Authentic natural-dyed handloom collections from Erode artisans. Available exclusively for wholesale and retail partner orders.
           </div>
         </nav>
 
@@ -169,19 +111,10 @@ export default function Catalogue() {
                 </Link>
 
                 {/* Meta details */}
-                <div className="flex flex-col gap-0.5 md:gap-1 flex-1">
-                  <span className="text-[10px] md:text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest">
-                    {product.category}
-                  </span>
-                  <h3 className="text-sm md:text-xl font-bold md:font-headline-md text-primary truncate">
+                <div className="flex flex-col gap-2 flex-1 justify-between">
+                  <h3 className="text-sm md:text-xl font-bold md:font-headline-md text-primary">
                     {product.name}
                   </h3>
-                  <p className="text-xs md:text-sm font-body-md text-on-surface-variant flex-1 truncate">
-                    {product.fabric}, {product.zariType}
-                  </p>
-                  <div className="text-[10px] md:text-xs font-mono text-on-surface-variant/80 mt-0.5 md:mt-1 mb-2 md:mb-3">
-                    SKU: {product.sku}
-                  </div>
                   
                   <Link 
                     to={`/product/${product.id}`}
@@ -206,7 +139,6 @@ export default function Catalogue() {
             <button 
               onClick={() => {
                 setSearchQuery('');
-                handleSelectAllFabrics(true);
               }}
               className="mt-6 border border-primary text-primary px-6 py-2.5 text-label-sm font-label-sm uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors bg-transparent"
             >

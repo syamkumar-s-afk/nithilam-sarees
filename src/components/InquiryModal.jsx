@@ -47,7 +47,7 @@ export default function InquiryModal({ product, onClose }) {
             {product && (
               <div className="mb-6 p-4 border border-outline-variant/30 bg-surface-container-low">
                 <h4 className="font-semibold text-on-surface text-sm">{product.name}</h4>
-                <p className="text-xs text-on-surface-variant">SKU: {product.sku} | {product.fabric}</p>
+                <p className="text-xs text-on-surface-variant">SKU: {product.sku}{product.fabric ? ` | ${product.fabric}` : ''}</p>
               </div>
             )}
 
