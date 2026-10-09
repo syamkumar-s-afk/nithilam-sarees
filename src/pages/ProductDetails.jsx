@@ -167,33 +167,23 @@ export default function ProductDetails() {
           )}
         </div>
 
-        {/* Right: Product Details & Pricing (Span 5) */}
+        {/* Right: Product Details & Inquiry (Span 5) */}
         <div className="lg:col-span-5 flex flex-col justify-between">
           <div>
-            {/* Title & Badges */}
             <div className="mb-stack-lg">
-              <div className="flex gap-2 mb-stack-sm">
-                <span className="inline-block px-2.5 py-1 bg-primary/5 text-primary text-label-sm font-label-sm uppercase">
-                  Hand-woven
-                </span>
-              </div>
               <h1 className="text-headline-lg font-headline-lg text-on-surface mb-2">{product.name}</h1>
-              <p className="text-body-md font-body-md text-on-surface-variant font-mono">SKU: {product.sku}</p>
             </div>
             
             <hr className="border-t border-outline-variant/30 mb-stack-lg" />
 
-            {/* Description */}
-            <div className="mb-stack-lg">
-              <h3 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-3">COLLECTION OVERVIEW</h3>
-              <div className="text-body-md font-body-md text-on-surface-variant leading-relaxed space-y-3">
-                {product.description ? (
-                  product.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))
-                ) : (
-                  <p className="italic text-on-surface-variant/60">No description available for this weave.</p>
-                )}
+            <div className="mb-stack-lg grid grid-cols-2 gap-4">
+              <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
+                <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Images</span>
+                <span className="text-body-md font-body-md text-on-surface font-semibold">{product.images.length}</span>
+              </div>
+              <div className="p-4 border border-outline-variant/20 bg-surface-container-low">
+                <span className="text-label-sm font-label-sm text-on-surface-variant block mb-1">Availability</span>
+                <span className="text-body-md font-body-md text-on-surface font-semibold">{product.stockStatus}</span>
               </div>
             </div>
           </div>
@@ -202,7 +192,7 @@ export default function ProductDetails() {
           <div className="bg-surface-container-lowest border border-outline-variant/30 p-6 mt-4">
             <h4 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-1">Wholesale Interest</h4>
             <p className="text-body-md text-on-surface-variant mb-4">
-              We exclusively cater to wholesale and bulk B2B ordering. To request official pricing lists, custom weaving options, or shipping estimates, submit a wholesale RFQ.
+              Interested in this saree for your store? Send a wholesale inquiry and our team will follow up.
             </p>
             <button 
               onClick={() => setShowInquiryModal(true)}

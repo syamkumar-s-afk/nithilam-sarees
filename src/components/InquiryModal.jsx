@@ -7,7 +7,7 @@ export default function InquiryModal({ product, onClose }) {
     email: '',
     phone: '',
     estimatedQty: 5,
-    message: `Hello, we are interested in placing a wholesale order inquiry for the "${product?.name}" (SKU: ${product?.sku}). Please provide shipping terms and custom pricing options.`
+    message: `Hello, we are interested in placing a wholesale order inquiry for "${product?.name}". Please provide shipping terms and custom pricing options.`
   });
   
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -47,7 +47,6 @@ export default function InquiryModal({ product, onClose }) {
             {product && (
               <div className="mb-6 p-4 border border-outline-variant/30 bg-surface-container-low">
                 <h4 className="font-semibold text-on-surface text-sm">{product.name}</h4>
-                <p className="text-xs text-on-surface-variant">SKU: {product.sku}{product.fabric ? ` | ${product.fabric}` : ''}</p>
               </div>
             )}
 

@@ -36,7 +36,7 @@ export default function Catalogue() {
   }, [searchQuery, sortBy]);
 
   const handleDownloadPriceList = () => {
-    alert("Wholesale Price List requested. Our sales department will email the official PDF to your registered business email.");
+    alert("Wholesale details requested. Our team will follow up with current availability and pricing.");
   };
 
   return (
@@ -86,7 +86,7 @@ export default function Catalogue() {
               </span>
               <input 
                 type="text"
-                placeholder="Search SKU..."
+                placeholder="Search name..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-8 md:pl-10 pr-2 md:pr-4 py-1.5 md:py-2 bg-surface border-b border-outline-variant/50 focus:border-primary focus:ring-0 text-xs md:text-body-md font-body-md transition-colors outline-none placeholder:text-on-surface-variant/60"
@@ -105,7 +105,7 @@ export default function Catalogue() {
                   <img 
                     src={product.mainImage} 
                     alt={product.name}
-                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                 </Link>
@@ -120,7 +120,7 @@ export default function Catalogue() {
                     to={`/product/${product.id}`}
                     className="self-start text-[10px] md:text-label-sm font-label-sm text-primary uppercase tracking-wider border-b border-primary pb-0.5 hover:text-surface-tint transition-colors group-hover:border-surface-tint flex items-center gap-0.5 mt-auto"
                   >
-                    Details
+                    View Images
                     <span className="material-symbols-outlined text-[10px] md:text-[14px]">arrow_forward</span>
                   </Link>
                 </div>
