@@ -3,6 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { products } from '../data/productsData';
 import InquiryModal from '../components/InquiryModal';
 
+const isMannequinImage = (imageUrl = '') => /mannequin|model|dress-form/i.test(imageUrl);
+const getProductImageFitClass = (imageUrl) => (
+  isMannequinImage(imageUrl) ? 'object-contain' : 'object-cover'
+);
+
 export default function ProductDetails() {
   const { id } = useParams();
   const decodedId = decodeURIComponent(id || '');
@@ -129,7 +134,7 @@ export default function ProductDetails() {
               ref={imageRef}
               src={activeImage} 
               alt={product.name}
-              className="w-full h-full object-contain main-image"
+              className={`w-full h-full ${getProductImageFitClass(activeImage)} main-image`}
             />
             {/* Interactive Zoom Lens */}
             <div className="fabric-zoom-lens" style={lensStyle}></div>
@@ -142,23 +147,23 @@ export default function ProductDetails() {
                 <button 
                   key={idx}
                   onClick={() => setActiveImage(imgUrl)}
-                  className={`bg-surface-container-lowest border p-2 h-28 w-full transition-all duration-300 ${
+                  className={`bg-surface-container-lowest border p-2 aspect-[3/2] w-full overflow-hidden transition-all duration-300 ${
                     activeImage === imgUrl ? 'border-primary shadow-sm' : 'border-outline-variant/20 hover:border-outline-variant'
                   }`}
                 >
-                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-contain" />
+                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} className={`w-full h-full ${getProductImageFitClass(imgUrl)}`} />
                 </button>
               ))}
               {/* Extra thumbnail for aesthetic padding if there is only 1 image */}
               {product.images.length === 1 && (
                 <>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 aspect-[3/2] w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Saree drape view
                   </div>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 aspect-[3/2] w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Zari reverse weave
                   </div>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 aspect-[3/2] w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Artisan zoom
                   </div>
                 </>
@@ -220,7 +225,7 @@ export default function ProductDetails() {
                 <img 
                   src={p.mainImage} 
                   alt={p.name}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                  className={`w-full h-full ${getProductImageFitClass(p.mainImage)} group-hover:scale-105 transition-transform duration-700`}
                   loading="lazy"
                 />
               </div>
