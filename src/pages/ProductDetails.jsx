@@ -137,12 +137,12 @@ export default function ProductDetails() {
 
           {/* Thumbnails */}
           {product.images && product.images.length > 0 && (
-            <div className="grid grid-cols-4 gap-stack-md h-28">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-stack-md">
               {product.images.map((imgUrl, idx) => (
                 <button 
                   key={idx}
                   onClick={() => setActiveImage(imgUrl)}
-                  className={`bg-surface-container-lowest border p-2 h-full w-full transition-all duration-300 ${
+                  className={`bg-surface-container-lowest border p-2 h-28 w-full transition-all duration-300 ${
                     activeImage === imgUrl ? 'border-primary shadow-sm' : 'border-outline-variant/20 hover:border-outline-variant'
                   }`}
                 >
@@ -152,13 +152,13 @@ export default function ProductDetails() {
               {/* Extra thumbnail for aesthetic padding if there is only 1 image */}
               {product.images.length === 1 && (
                 <>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-full w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Saree drape view
                   </div>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-full w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Zari reverse weave
                   </div>
-                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-full w-full flex items-center justify-center text-xs text-on-surface-variant/40">
+                  <div className="bg-surface-container-low/20 border border-dashed border-outline-variant/10 p-2 h-28 w-full flex items-center justify-center text-xs text-on-surface-variant/40">
                     Artisan zoom
                   </div>
                 </>

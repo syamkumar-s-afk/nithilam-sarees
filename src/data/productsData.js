@@ -43,7 +43,6 @@ export const products = [
   ]),
   makeProduct('collection-04', 'Collection 04', [
     '/sarees/new-2026/04/display.png',
-    '/sarees/new-2026/04/jpg-3.png',
     '/sarees/new-2026/04/jpg-2.png',
     '/sarees/new-2026/04/jpg-4.png',
     '/sarees/new-2026/04/jpg.png',
@@ -119,26 +118,23 @@ export const products = [
     '/sarees/10..saree/1.JPG',
     '/sarees/10..saree/3.JPG',
   ]),
-  makeProduct('collection-06', 'Collection 06', [
-    '/sarees/new-2026/06/display.png',
-    '/sarees/new-2026/06/jpg-2.png',
-    '/sarees/new-2026/06/jpg-3.png',
-    '/sarees/new-2026/06/jpg-4.png',
-    '/sarees/new-2026/06/jpg.png',
+  makeProduct('nm-1016', 'NM/1016', [
+    '/sarees/new-2026/nm-1016/display.png',
+    '/sarees/new-2026/nm-1016/jpg-2.png',
+    '/sarees/new-2026/nm-1016/jpg-4.png',
+    '/sarees/new-2026/nm-1016/jpg.png',
   ]),
   makeProduct('collection-07', 'Collection 07', [
     '/sarees/new-2026/07/display.png',
-    '/sarees/new-2026/07/jpg-2.png',
     '/sarees/new-2026/07/jpg-3.png',
     '/sarees/new-2026/07/jpg-4.png',
     '/sarees/new-2026/07/jpg.png',
   ]),
-  makeProduct('collection-08', 'Collection 08', [
-    '/sarees/new-2026/08/display.png',
-    '/sarees/new-2026/08/jpg-3.png',
-    '/sarees/new-2026/08/jpg-2.png',
-    '/sarees/new-2026/08/jpg-4.png',
-    '/sarees/new-2026/08/jpg.png',
+  makeProduct('nm-1002-01', 'NM/1002/01', [
+    '/sarees/new-2026/nm-1002-01/display.png',
+    '/sarees/new-2026/nm-1002-01/jpg-3.png',
+    '/sarees/new-2026/nm-1002-01/jpg-4.png',
+    '/sarees/new-2026/nm-1002-01/jpg.png',
   ]),
   makeProduct('nm-1008-24', 'NM/1008/24', [
     '/sarees/new-2026/nm-1008-24/display.png',
@@ -171,5 +167,79 @@ export const products = [
     '/sarees/new-2026/nm-2003-3/chatgpt-image-oct-1-2026-03-49-51-pm.png',
     '/sarees/new-2026/nm-2003-3/chatgpt-image-oct-1-2026-03-50-41-pm.png',
     '/sarees/new-2026/nm-2003-3/04.jpg',
+  ]),
+  makeProduct('collection-02-10-10-2026', 'Collection 02', [
+    '/sarees/new-2026/10-10-2026/02/display.png',
+    '/sarees/new-2026/10-10-2026/02/jpg-2.png',
+    '/sarees/new-2026/10-10-2026/02/jpg-4.png',
+    '/sarees/new-2026/10-10-2026/02/jpg.png',
+  ]),
+  makeProduct('collection-06-10-10-2026', 'Collection 06', [
+    '/sarees/new-2026/10-10-2026/06/display.png',
+    '/sarees/new-2026/10-10-2026/06/jpg-2.png',
+    '/sarees/new-2026/10-10-2026/06/jpg-3.png',
+    '/sarees/new-2026/10-10-2026/06/jpg.png',
+  ]),
+  makeProduct('collection-07-10-10-2026', 'Collection 07', [
+    '/sarees/new-2026/10-10-2026/07/display.png',
+    '/sarees/new-2026/10-10-2026/07/festive-handloom-saree-flatlay.png',
+    '/sarees/new-2026/10-10-2026/07/festive-woven-textile-with-brass-diyas.png',
+  ]),
+  makeProduct('collection-08-10-10-2026', 'Collection 08', [
+    '/sarees/new-2026/10-10-2026/08/display.png',
+    '/sarees/new-2026/10-10-2026/08/chatgpt-image-oct-8-2026-04-18-02-pm.png',
+    '/sarees/new-2026/10-10-2026/08/grand-kerala-textile-showcase.png',
+  ]),
+  makeProduct('collection-09-10-10-2026', 'Collection 09', [
+    '/sarees/new-2026/10-10-2026/09/display.png',
+    '/sarees/new-2026/10-10-2026/09/chatgpt-image-oct-8-2026-04-16-57-pm.png',
+    '/sarees/new-2026/10-10-2026/09/mint-green-handloom-saree-with-jasmine-accents.png',
+  ]),
+  makeProduct('collection-10-10-10-2026', 'Collection 10', [
+    '/sarees/new-2026/10-10-2026/10/display.png',
+    '/sarees/new-2026/10-10-2026/10/festive-woven-textile-flat-lay.png',
+    '/sarees/new-2026/10-10-2026/10/grand-golden-saree-with-festive-florals.png',
+  ]),
+  makeProduct('collection-11-10-10-2026', 'Collection 11', [
+    '/sarees/new-2026/10-10-2026/11/display.png',
+    '/sarees/new-2026/10-10-2026/11/chatgpt-image-oct-8-2026-10-43-02-pm.png',
+    '/sarees/new-2026/10-10-2026/11/chatgpt-image-oct-8-2026-10-47-48-pm.png',
+  ]),
+  makeProduct('nm-1002-bb', 'NM/1002 BB', [
+    '/sarees/new-2026/10-10-2026/nm-1002-bb/display.png',
+    '/sarees/new-2026/10-10-2026/nm-1002-bb/jpg-3.png',
+    '/sarees/new-2026/10-10-2026/nm-1002-bb/jpg-4.png',
+    '/sarees/new-2026/10-10-2026/nm-1002-bb/jpg.png',
+  ]),
+  makeProduct('nm-1017-01', 'NM/1017/01', [
+    '/sarees/new-2026/10-10-2026/nm-1017-01/display.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-01/chatgpt-image-oct-8-2026-10-59-59-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-01/chatgpt-image-oct-8-2026-11-01-17-pm.png',
+  ]),
+  makeProduct('nm-1017-02', 'NM/1017/02', [
+    '/sarees/new-2026/10-10-2026/nm-1017-02/display.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-02/chatgpt-image-oct-8-2026-10-54-20-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-02/chatgpt-image-oct-8-2026-10-57-08-pm.png',
+  ]),
+  makeProduct('nm-1017-06', 'NM/1017/06', [
+    '/sarees/new-2026/10-10-2026/nm-1017-06/chatgpt-image-oct-8-2026-11-07-16-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-06/chatgpt-image-oct-8-2026-11-08-35-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-06/chatgpt-image-oct-8-2026-11-14-33-pm.png',
+  ]),
+  makeProduct('nm-1017-07', 'NM/1017/07', [
+    '/sarees/new-2026/10-10-2026/nm-1017-07/display.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-07/chatgpt-image-oct-8-2026-11-02-34-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-07/chatgpt-image-oct-8-2026-11-05-59-pm.png',
+  ]),
+  makeProduct('nm-1017-15', 'NM/1017/15', [
+    '/sarees/new-2026/10-10-2026/nm-1017-15/display.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-15/chatgpt-image-oct-8-2026-10-49-27-pm.png',
+    '/sarees/new-2026/10-10-2026/nm-1017-15/chatgpt-image-oct-8-2026-10-52-45-pm.png',
+  ]),
+  makeProduct('nm-2004-06', 'NM/2004/06', [
+    '/sarees/new-2026/10-10-2026/nm-2004-06/display.png',
+    '/sarees/new-2026/10-10-2026/nm-2004-06/jpg-3.png',
+    '/sarees/new-2026/10-10-2026/nm-2004-06/jpg-4.png',
+    '/sarees/new-2026/10-10-2026/nm-2004-06/jpg.png',
   ]),
 ];
