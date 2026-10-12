@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Catalogue from './pages/Catalogue';
 import ProductDetails from './pages/ProductDetails';
 import StoryDetail from './pages/StoryDetail';
+import nithilamLogo from './assets/nithilam-logo.png';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -75,7 +76,7 @@ function MainAppShell() {
             aria-label="Nithilam Sarees Home"
           >
             <img
-              src="/nithilam-logo.png"
+              src={nithilamLogo}
               alt="Nithilam Natural Dyed Cotton"
               className="h-16 md:h-20 w-auto object-contain mix-blend-multiply"
             />
@@ -224,7 +225,7 @@ function MainAppShell() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
           <div className="md:col-span-2">
             <img
-              src="/nithilam-logo.png"
+              src={nithilamLogo}
               alt="Nithilam Natural Dyed Cotton"
               className="h-24 w-auto object-contain mb-4 mix-blend-multiply"
             />
