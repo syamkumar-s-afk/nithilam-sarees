@@ -9,28 +9,26 @@ export default function Catalogue() {
   const filteredAndSortedProducts = useMemo(() => {
     let result = products;
 
-    // Filter by Search Query (Name or SKU)
+    // Filter by Search Query (Name or SKU with flexible formatting)
     if (searchQuery.trim() !== '') {
-      const q = searchQuery.toLowerCase();
-      result = result.filter(p => 
-        p.name.toLowerCase().includes(q) || 
-        p.sku.toLowerCase().includes(q)
-      );
+      const q = searchQuery.toLowerCase().trim();
+      const cleanQ = q.replace(/[\s\/\#\-\_]/g, '');
+      result = result.filter(p => {
+        const name = (p.name || '').toLowerCase();
+        const sku = (p.sku || '').toLowerCase();
+        const cleanName = name.replace(/[\s\/\#\-\_]/g, '');
+        const cleanSku = sku.replace(/[\s\/\#\-\_]/g, '');
+        return name.includes(q) || sku.includes(q) || (cleanQ && (cleanName.includes(cleanQ) || cleanSku.includes(cleanQ)));
+      });
     }
 
     // Sort
-    result = [...result].sort((a, b) => {
-      const priceA = a.pricingTiers?.[0]?.price || 0;
-      const priceB = b.pricingTiers?.[0]?.price || 0;
-
-      if (sortBy === 'price-high-low') {
-        return priceB - priceA;
-      } else if (sortBy === 'price-low-high') {
-        return priceA - priceB;
-      } else {
-        return a.sku.localeCompare(b.sku);
-      }
-    });
+    if (sortBy === 'price-high-low') {
+      result = [...result].sort((a, b) => (b.pricingTiers?.[0]?.price || 0) - (a.pricingTiers?.[0]?.price || 0));
+    } else if (sortBy === 'price-low-high') {
+      result = [...result].sort((a, b) => (a.pricingTiers?.[0]?.price || 0) - (b.pricingTiers?.[0]?.price || 0));
+    }
+    // When sortBy === 'newest', maintain array order (newest arrivals at the top)
 
     return result;
   }, [searchQuery, sortBy]);

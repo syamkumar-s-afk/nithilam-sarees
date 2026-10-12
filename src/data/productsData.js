@@ -21,6 +21,66 @@ const makeProduct = (id, name, images) => {
 };
 
 export const products = [
+  makeProduct('nm-2002-blue', 'NM/2002 Blue', [
+    '/sarees/new-2026/12-10-2026/nm-2002-blue/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2002-blue/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2002-blue/jpg.png',
+    '/sarees/new-2026/12-10-2026/nm-2002-blue/01.jpg',
+  ]),
+  makeProduct('nm-2003-07', 'NM/2003/07', [
+    '/sarees/new-2026/12-10-2026/nm-2003-07/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-07/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-07/jpg.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-07/05.jpg',
+  ]),
+  makeProduct('nm-2003-08', 'NM/2003/08', [
+    '/sarees/new-2026/12-10-2026/nm-2003-08/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-08/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-08/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-08/10.jpg',
+  ]),
+  makeProduct('nm-2003-09', 'NM/2003/09', [
+    '/sarees/new-2026/12-10-2026/nm-2003-09/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-09/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-09/jpg.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-09/08.jpg',
+  ]),
+  makeProduct('nm-2003-10', 'NM/2003/10', [
+    '/sarees/new-2026/12-10-2026/nm-2003-10/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10/07.jpg',
+  ]),
+  makeProduct('nm-2003-10-turquoise', 'NM/2003/10 Turquoise', [
+    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/09.jpg',
+  ]),
+  makeProduct('nm-2003-12', 'NM/2003/12', [
+    '/sarees/new-2026/12-10-2026/nm-2003-12/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-12/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-12/jpg.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-12/03.jpg',
+  ]),
+  makeProduct('nm-2003-13', 'NM/2003/13', [
+    '/sarees/new-2026/12-10-2026/nm-2003-13/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-13/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-13/jpg.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-13/02.jpg',
+  ]),
+  makeProduct('nm-2003-14', 'NM/2003/14', [
+    '/sarees/new-2026/12-10-2026/nm-2003-14/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-14/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-14/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-14/04.jpg',
+  ]),
+  makeProduct('nm-2003-15', 'NM/2003/15', [
+    '/sarees/new-2026/12-10-2026/nm-2003-15/display.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-15/jpg-2.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-15/jpg-3.png',
+    '/sarees/new-2026/12-10-2026/nm-2003-15/06.jpg',
+  ]),
   makeProduct('nm-1013-15', 'NM/1013/15', [
     '/sarees/02..saree/display.JPG',
     '/sarees/02..saree/4.JPG',
@@ -241,65 +301,5 @@ export const products = [
     '/sarees/new-2026/10-10-2026/nm-2004-06/jpg-3.png',
     '/sarees/new-2026/10-10-2026/nm-2004-06/jpg-4.png',
     '/sarees/new-2026/10-10-2026/nm-2004-06/jpg.png',
-  ]),
-  makeProduct('nm-2002-blue', 'NM/2002 Blue', [
-    '/sarees/new-2026/12-10-2026/nm-2002-blue/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2002-blue/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2002-blue/jpg.png',
-    '/sarees/new-2026/12-10-2026/nm-2002-blue/01.jpg',
-  ]),
-  makeProduct('nm-2003-07', 'NM/2003/07', [
-    '/sarees/new-2026/12-10-2026/nm-2003-07/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-07/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-07/jpg.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-07/05.jpg',
-  ]),
-  makeProduct('nm-2003-08', 'NM/2003/08', [
-    '/sarees/new-2026/12-10-2026/nm-2003-08/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-08/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-08/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-08/10.jpg',
-  ]),
-  makeProduct('nm-2003-09', 'NM/2003/09', [
-    '/sarees/new-2026/12-10-2026/nm-2003-09/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-09/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-09/jpg.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-09/08.jpg',
-  ]),
-  makeProduct('nm-2003-10', 'NM/2003/10', [
-    '/sarees/new-2026/12-10-2026/nm-2003-10/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10/07.jpg',
-  ]),
-  makeProduct('nm-2003-10-turquoise', 'NM/2003/10 Turquoise', [
-    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-10-turquoise/09.jpg',
-  ]),
-  makeProduct('nm-2003-12', 'NM/2003/12', [
-    '/sarees/new-2026/12-10-2026/nm-2003-12/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-12/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-12/jpg.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-12/03.jpg',
-  ]),
-  makeProduct('nm-2003-13', 'NM/2003/13', [
-    '/sarees/new-2026/12-10-2026/nm-2003-13/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-13/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-13/jpg.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-13/02.jpg',
-  ]),
-  makeProduct('nm-2003-14', 'NM/2003/14', [
-    '/sarees/new-2026/12-10-2026/nm-2003-14/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-14/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-14/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-14/04.jpg',
-  ]),
-  makeProduct('nm-2003-15', 'NM/2003/15', [
-    '/sarees/new-2026/12-10-2026/nm-2003-15/display.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-15/jpg-2.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-15/jpg-3.png',
-    '/sarees/new-2026/12-10-2026/nm-2003-15/06.jpg',
   ]),
 ];

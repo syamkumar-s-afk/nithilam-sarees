@@ -10,6 +10,7 @@ import {
   voiceContent,
 } from '../data/brandContent';
 import WholesaleInquiryForm from '../components/WholesaleInquiryForm';
+import { products } from '../data/productsData';
 
 export default function Home() {
   return (
@@ -48,6 +49,54 @@ export default function Home() {
             >
               Read Brand Stories
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Weaves Showcase */}
+      <section className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-12 md:py-20 border-b border-outline-variant/20">
+        <div className="max-w-container-max mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-4">
+            <div>
+              <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-2 font-semibold">
+                Latest Additions
+              </span>
+              <h2 className="text-2xl md:text-headline-lg font-headline-md text-primary">
+                New Saree Weaves
+              </h2>
+            </div>
+            <Link
+              to="/collections"
+              className="text-label-sm font-label-sm uppercase tracking-widest text-primary border-b border-primary pb-0.5 hover:text-surface-tint hover:border-surface-tint transition-colors flex items-center gap-1"
+            >
+              Explore Full Catalogue ({products.length} Sarees)
+              <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {products.slice(0, 4).map((p) => (
+              <Link
+                key={p.id}
+                to={`/product/${p.id}`}
+                className="group cursor-pointer flex flex-col bg-surface-container-lowest border border-outline-variant/20 p-3 md:p-4 hover:border-primary/40 transition-colors"
+              >
+                <div className="aspect-[3/2] bg-surface-container-low mb-3 overflow-hidden">
+                  <img
+                    src={p.mainImage}
+                    alt={p.name}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <h4 className="text-sm md:text-base font-semibold text-primary truncate mb-1">
+                  {p.name}
+                </h4>
+                <span className="text-xs text-on-surface-variant flex items-center gap-1 group-hover:text-primary transition-colors mt-auto">
+                  View Saree <span className="material-symbols-outlined text-[12px]">arrow_forward</span>
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
