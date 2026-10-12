@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { products } from '../data/productsData';
 import InquiryModal from '../components/InquiryModal';
+import WholesaleInquiryForm from '../components/WholesaleInquiryForm';
 
 const isMannequinImage = (imageUrl = '') => /mannequin|model|dress-form/i.test(imageUrl);
 const getProductImageFitClass = (imageUrl) => (
@@ -193,18 +194,14 @@ export default function ProductDetails() {
             </div>
           </div>
 
-          {/* Ordering Form (No active checkouts, purely wholesale catalog inquiry form trigger) */}
-          <div className="bg-surface-container-lowest border border-outline-variant/30 p-6 mt-4">
-            <h4 className="text-label-sm font-label-sm text-primary uppercase tracking-wider mb-1">Wholesale Interest</h4>
-            <p className="text-body-md text-on-surface-variant mb-4">
-              Interested in this saree for your store? Send a wholesale inquiry and our team will follow up.
-            </p>
-            <button 
-              onClick={() => setShowInquiryModal(true)}
-              className="w-full bg-primary text-on-primary py-4 px-6 text-label-sm font-label-sm uppercase tracking-widest hover:bg-primary-container transition-colors duration-300 shadow-sm"
-            >
-              Contact for Wholesale Inquiries
-            </button>
+          {/* Embedded Wholesale Inquiry Form at the side of product page */}
+          <div className="mt-4">
+            <WholesaleInquiryForm 
+              product={product}
+              variant="sidebar"
+              title={`Inquire for "${product.name}"`}
+              subtitle="Submit your business details to connect directly with our wholesale team on WhatsApp (+91 73392 60199)."
+            />
           </div>
         </div>
       </div>

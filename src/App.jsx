@@ -122,6 +122,13 @@ function MainAppShell() {
             >
               View More
             </a>
+
+            <a 
+              href="/#wholesale-inquiry"
+              className="border border-primary text-primary hover:bg-primary hover:text-on-primary px-4 py-2 text-label-sm font-label-sm uppercase tracking-widest transition-colors duration-300 ml-2"
+            >
+              Wholesale Inquiry
+            </a>
           </nav>
 
           {/* Actions & Mobile Burger */}
@@ -174,6 +181,13 @@ function MainAppShell() {
               className="text-body-lg uppercase font-semibold text-on-surface-variant py-2"
             >
               View More
+            </a>
+            <a 
+              href="/#wholesale-inquiry"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-body-lg uppercase font-semibold text-primary py-2"
+            >
+              Wholesale Inquiry
             </a>
             <div className="border-t border-outline-variant/20 pt-4 mt-2">
               <span className="text-label-sm text-primary uppercase block mb-1">Direct Wholesale Access</span>

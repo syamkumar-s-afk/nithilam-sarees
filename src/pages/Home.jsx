@@ -9,6 +9,7 @@ import {
   valueProposition,
   voiceContent,
 } from '../data/brandContent';
+import WholesaleInquiryForm from '../components/WholesaleInquiryForm';
 
 export default function Home() {
   return (
@@ -35,6 +36,12 @@ export default function Home() {
             >
               Explore Collections
             </Link>
+            <a
+              href="#wholesale-inquiry"
+              className="inline-flex items-center justify-center border border-white/60 bg-white/10 hover:bg-white/20 text-white px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest backdrop-blur-sm transition-colors"
+            >
+              Wholesale Inquiries
+            </a>
             <a
               href="#stories"
               className="inline-flex items-center justify-center border border-white/40 text-white px-8 py-4 text-label-sm font-label-sm uppercase tracking-widest hover:bg-white/10 transition-colors"
@@ -289,6 +296,83 @@ export default function Home() {
               <p className="text-body-md text-on-surface-variant leading-relaxed">
                 {voiceContent.tone}
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Direct Wholesale & Boutique Inquiry Section */}
+      <section 
+        id="wholesale-inquiry"
+        className="bg-surface-container-low px-margin-mobile md:px-margin-desktop py-12 md:py-24 border-t border-outline-variant/30 scroll-mt-20"
+      >
+        <div className="max-w-container-max mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
+            {/* Left Column: Context & B2B Information */}
+            <div className="lg:col-span-5 space-y-6">
+              <div>
+                <span className="text-label-sm font-label-sm uppercase tracking-[0.24em] text-primary block mb-3">
+                  Direct B2B Sourcing
+                </span>
+                <h2 className="text-2xl md:text-headline-lg font-headline-lg text-primary mb-4 leading-tight">
+                  Partner with Nithilam for authentic botanical sarees.
+                </h2>
+                <p className="text-body-md text-on-surface-variant leading-relaxed">
+                  We supply conscious boutiques, organic apparel stores, and exhibition curators with certified botanical-dyed sarees woven and processed ethically in Erode.
+                </p>
+              </div>
+
+              <div className="bg-surface-container-lowest border border-outline-variant/20 p-6 space-y-4">
+                <h4 className="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">
+                  What Retail Partners Receive:
+                </h4>
+                <ul className="space-y-4 text-body-md text-on-surface-variant text-sm divide-y divide-outline-variant/15">
+                  <li className="flex items-start gap-3.5 pt-3 first:pt-0">
+                    <span className="font-headline-md text-primary font-semibold text-sm shrink-0 mt-0.5">01</span>
+                    <div>
+                      <strong className="text-on-surface block font-semibold">Direct Artisan Pricing</strong>
+                      <span>Transparent wholesale tiers direct from our Erode weaving cluster without intermediaries.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3.5 pt-3">
+                    <span className="font-headline-md text-primary font-semibold text-sm shrink-0 mt-0.5">02</span>
+                    <div>
+                      <strong className="text-on-surface block font-semibold">Boutique Trial Lots</strong>
+                      <span>Flexible initial curation batches (5–10 sarees) for boutique partner testing.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3.5 pt-3">
+                    <span className="font-headline-md text-primary font-semibold text-sm shrink-0 mt-0.5">03</span>
+                    <div>
+                      <strong className="text-on-surface block font-semibold">High-Resolution Drape Media</strong>
+                      <span>Digital lookbook assets and botanical dye certification notes for client presentations.</span>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3.5 pt-3">
+                    <span className="font-headline-md text-primary font-semibold text-sm shrink-0 mt-0.5">04</span>
+                    <div>
+                      <strong className="text-on-surface block font-semibold">Direct Trade Coordinator</strong>
+                      <span>Real-time WhatsApp support on <span className="text-primary font-semibold">+91 73392 60199</span>.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-4 bg-primary text-on-primary border border-primary-container">
+                <span className="text-label-sm uppercase tracking-widest text-white/70 block mb-1">Direct Wholesale Coordinator</span>
+                <p className="text-sm text-white/90">
+                  Call or WhatsApp directly: <strong className="text-white">+91 73392 60199</strong>
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Embedded Form */}
+            <div className="lg:col-span-7">
+              <WholesaleInquiryForm 
+                variant="section"
+                title="Wholesale & Bulk Orders Inquiry"
+                subtitle="Fill in your details below to instantly connect with our wholesale team on WhatsApp (+91 73392 60199)."
+              />
             </div>
           </div>
         </div>
