@@ -77,7 +77,7 @@ function MainAppShell() {
             <img
               src="/nithilam-logo.png"
               alt="Nithilam Natural Dyed Cotton"
-              className="h-16 md:h-20 w-auto object-contain"
+              className="h-16 md:h-20 w-auto object-contain mix-blend-multiply"
             />
           </Link>
           
@@ -226,7 +226,7 @@ function MainAppShell() {
             <img
               src="/nithilam-logo.png"
               alt="Nithilam Natural Dyed Cotton"
-              className="h-24 w-auto object-contain mb-4"
+              className="h-24 w-auto object-contain mb-4 mix-blend-multiply"
             />
             <p className="text-body-md font-body-md text-on-surface-variant max-w-sm">
               Natural-dyed sarees for conscious retail partners, built around botanical colour, artisan dignity, and a cleaner textile story from Erode.
