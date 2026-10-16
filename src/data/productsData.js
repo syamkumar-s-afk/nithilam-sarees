@@ -21,6 +21,114 @@ const makeProduct = (id, name, images) => {
 };
 
 export const products = [
+  makeProduct('nm-1018-02', 'NM/1018/02', [
+    '/sarees/new-2026/14-10-2026/nm-1018-02/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-02/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-02/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-02/13.jpg',
+  ]),
+  makeProduct('nm-1018-03', 'NM/1018/03', [
+    '/sarees/new-2026/14-10-2026/nm-1018-03/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-03/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-03/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-03/11.jpg',
+  ]),
+  makeProduct('nm-1018-04', 'NM/1018/04', [
+    '/sarees/new-2026/14-10-2026/nm-1018-04/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-04/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-04/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-04/12.jpg',
+  ]),
+  makeProduct('nm-1018-10', 'NM/1018/10', [
+    '/sarees/new-2026/14-10-2026/nm-1018-10/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-10/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-10/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-10/10.jpg',
+  ]),
+  makeProduct('nm-1018-11', 'NM/1018/11', [
+    '/sarees/new-2026/14-10-2026/nm-1018-11/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-11/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-11/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-11/07.jpg',
+  ]),
+  makeProduct('nm-1018-14', 'NM/1018/14', [
+    '/sarees/new-2026/14-10-2026/nm-1018-14/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-14/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-14/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-14/09.jpg',
+  ]),
+  makeProduct('nm-1018-15', 'NM/1018/15', [
+    '/sarees/new-2026/14-10-2026/nm-1018-15/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-15/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-15/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1018-15/14.jpg',
+  ]),
+  makeProduct('nm-1019-01', 'NM/1019/01', [
+    '/sarees/new-2026/14-10-2026/nm-1019-01/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-01/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-01/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-01/08.jpg',
+  ]),
+  makeProduct('nm-1019-02', 'NM/1019/02', [
+    '/sarees/new-2026/14-10-2026/nm-1019-02/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-02/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-02/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-02/08.jpg',
+  ]),
+  makeProduct('nm-1019-03', 'NM/1019/03', [
+    '/sarees/new-2026/14-10-2026/nm-1019-03/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-03/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-03/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-03/01.jpg',
+  ]),
+  makeProduct('nm-1019-04', 'NM/1019/04', [
+    '/sarees/new-2026/14-10-2026/nm-1019-04/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-04/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-04/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-04/06.jpg',
+  ]),
+  makeProduct('nm-1019-05', 'NM/1019/05', [
+    '/sarees/new-2026/14-10-2026/nm-1019-05/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-05/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-05/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-05/07.jpg',
+  ]),
+  makeProduct('nm-1019-06', 'NM/1019/06', [
+    '/sarees/new-2026/14-10-2026/nm-1019-06/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-06/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-06/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1019-06/06.jpg',
+  ]),
+  makeProduct('nm-1020-01', 'NM/1020/01', [
+    '/sarees/new-2026/14-10-2026/nm-1020-01/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-01/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-01/jpg.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-01/03.jpg',
+  ]),
+  makeProduct('nm-1020-02', 'NM/1020/02', [
+    '/sarees/new-2026/14-10-2026/nm-1020-02/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-02/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-02/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-02/04.jpg',
+  ]),
+  makeProduct('nm-1020-03', 'NM/1020/03', [
+    '/sarees/new-2026/14-10-2026/nm-1020-03/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-03/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-03/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-03/05.jpg',
+  ]),
+  makeProduct('nm-1020-04', 'NM/1020/04', [
+    '/sarees/new-2026/14-10-2026/nm-1020-04/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-04/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-04/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-04/01.jpg',
+  ]),
+  makeProduct('nm-1020-05', 'NM/1020/05', [
+    '/sarees/new-2026/14-10-2026/nm-1020-05/display.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-05/jpg-2.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-05/jpg-3.png',
+    '/sarees/new-2026/14-10-2026/nm-1020-05/02.jpg',
+  ]),
   makeProduct('nm-2002-blue', 'NM/2002 Blue', [
     '/sarees/new-2026/12-10-2026/nm-2002-blue/display.png',
     '/sarees/new-2026/12-10-2026/nm-2002-blue/jpg-3.png',
