@@ -21,6 +21,82 @@ const makeProduct = (id, name, images) => {
 };
 
 export const products = [
+  makeProduct('collection-21-27-10-2026', 'Collection 21', [
+    '/sarees/new-2026/27-10-2026/21/display.png',
+    '/sarees/new-2026/27-10-2026/21/grand-woven-saree-display.png',
+    '/sarees/new-2026/27-10-2026/21/indigo-jacquard-saree-still-life.png',
+  ]),
+  makeProduct('collection-22-27-10-2026', 'Collection 22', [
+    '/sarees/new-2026/27-10-2026/22/display.png',
+    '/sarees/new-2026/27-10-2026/22/ceremonial-blue-saree-still-life.png',
+    '/sarees/new-2026/27-10-2026/22/charcoal-jacquard-textile-with-jasmine-and-brass-accents.png',
+    '/sarees/new-2026/27-10-2026/22/elegant-gray-jacquard-saree-still-life.png',
+  ]),
+  makeProduct('collection-23-27-10-2026', 'Collection 23', [
+    '/sarees/new-2026/27-10-2026/23/display.png',
+    '/sarees/new-2026/27-10-2026/23/grand-blue-jacquard-saree-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/23/royal-blue-jacquard-saree-still-life.png',
+    '/sarees/new-2026/27-10-2026/23/11.jpg',
+  ]),
+  makeProduct('collection-24-27-10-2026', 'Collection 24', [
+    '/sarees/new-2026/27-10-2026/24/display.png',
+    '/sarees/new-2026/27-10-2026/24/lavender-brocade-saree-still-life.png',
+    '/sarees/new-2026/27-10-2026/24/regal-purple-brocade-textile-flat-lay.png',
+  ]),
+  makeProduct('nm-1008-27-10-2026', 'NM/1008', [
+    '/sarees/new-2026/27-10-2026/nm-1008/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1008/teal-jacquard-saree-with-festive-florals.png',
+    '/sarees/new-2026/27-10-2026/nm-1008/teal-jacquard-textile-with-brass-and-blossoms.png',
+    '/sarees/new-2026/27-10-2026/nm-1008/02.jpg',
+  ]),
+  makeProduct('nm-1008-08', 'NM/1008/08', [
+    '/sarees/new-2026/27-10-2026/nm-1008-08/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-08/grand-maroon-and-blue-saree-flatlay.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-08/grand-saree-flat-lay-with-flowers-and-diya.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-08/07.jpg',
+  ]),
+  makeProduct('nm-1008-12', 'NM/1008/12', [
+    '/sarees/new-2026/27-10-2026/nm-1008-12/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-12/luxurious-mauve-saree-festive-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-12/luxury-mauve-saree-floral-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-12/06.jpg',
+  ]),
+  makeProduct('nm-1008-14', 'NM/1008/14', [
+    '/sarees/new-2026/27-10-2026/nm-1008-14/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-14/grand-beige-saree-still-life.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-14/ornate-mauve-saree-flatlay-with-brass-accents.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-14/12.jpg',
+  ]),
+  makeProduct('nm-1008-25', 'NM/1008/25', [
+    '/sarees/new-2026/27-10-2026/nm-1008-25/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-25/grand-blue-grey-saree-still-life.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-25/teal-saree-heritage-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1008-25/05.jpg',
+  ]),
+  makeProduct('nm-1009-27-10-2026', 'NM/1009', [
+    '/sarees/new-2026/27-10-2026/nm-1009/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1009/festive-green-and-blush-saree-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1009/grand-heritage-saree-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1009/01.jpg',
+  ]),
+  makeProduct('nm-1009-01', 'NM/1009/01', [
+    '/sarees/new-2026/27-10-2026/nm-1009-01/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-01/grand-brass-and-jasmine-textile-display.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-01/grand-handwoven-saree-with-floral-accents.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-01/03.jpg',
+  ]),
+  makeProduct('nm-1009-14', 'NM/1009/14', [
+    '/sarees/new-2026/27-10-2026/nm-1009-14/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-14/grand-purple-saree-with-jasmine-accents.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-14/lavender-jacquard-saree-with-jasmine-accents.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-14/04.jpg',
+  ]),
+  makeProduct('nm-1009-02', 'NM/1009/02', [
+    '/sarees/new-2026/27-10-2026/nm-1009-02/display.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-02/luxurious-pink-and-charcoal-textile-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-02/luxurious-pink-saree-flat-lay.png',
+    '/sarees/new-2026/27-10-2026/nm-1009-02/08.jpg',
+  ]),
   makeProduct('nm-1018-02', 'NM/1018/02', [
     '/sarees/new-2026/14-10-2026/nm-1018-02/display.png',
     '/sarees/new-2026/14-10-2026/nm-1018-02/jpg-3.png',
